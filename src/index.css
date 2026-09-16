@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: Inter, system-ui, sans-serif;
+  --color-stone-150: #EFECE6;
+  --color-stone-550: #5F5C54;
+  --color-stone-750: #3D3B36;
+  --color-stone-850: #1F1E1A;
+  --color-amber-850: #8E6F27;
+  
+  --animate-slide-down: slide-down 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-left: slide-left 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scale-up: scale-up 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  --animate-fade-in: fade-in 0.25s ease-out forwards;
+  --animate-shake: shake 0.2s ease-in-out 2;
+
+  @keyframes slide-down {
+    0% { transform: translateY(-10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes slide-left {
+    0% { transform: translateX(100%); opacity: 0.8; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes scale-up {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  }
+}
+
+@utility custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #E2E0D9 transparent;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-stone-50 text-stone-900 selection:bg-amber-100 selection:text-amber-900 antialiased overflow-x-hidden;
+    /* Safe Layout heights */
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  button, a, input, select { -webkit-tap-highlight-color: transparent; }
+  button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #a86f2b; outline-offset: 3px; }
+
+  /* WebKit scrollbars custom styles */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #D6D2C4;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #A39E8F;
+  }
+}
+
+.glass {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.contain-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
+}
