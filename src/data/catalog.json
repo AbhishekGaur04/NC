@@ -4362,5 +4362,1623 @@
       1191330308,
       4489216
     ]
+  },
+  {
+    "id": 158,
+    "sku": "NC-TISSUE-SAREE-850",
+    "name": "Tissue Saree",
+    "slug": "tissue-saree",
+    "brand": "NandiniCollection",
+    "description": "Tissue Saree. Lightweight, comfortable and suitable for festive celebrations, parties and everyday elegance. Product details: saree with a graceful drape and premium finish.",
+    "type": "saree",
+    "fabric": "silk",
+    "work": [
+      "plain"
+    ],
+    "occasion": [
+      "festive",
+      "casual"
+    ],
+    "color": "gold",
+    "colors": [
+      "gold",
+      "beige",
+      "multi"
+    ],
+    "price": 850,
+    "salePrice": 850,
+    "discount": 0,
+    "priceRange": "under2k",
+    "discountRange": "none",
+    "sizes": [
+      {
+        "size": "Custom",
+        "inStock": true,
+        "quantity": 1
+      },
+      {
+        "size": "XS",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "S",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "M",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "L",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "XL",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "XXL",
+        "inStock": false,
+        "quantity": 0
+      }
+    ],
+    "images": [
+      {
+        "url": "/images/products/tissue-saree-1-1080w.webp",
+        "alt": "Tissue Saree - View 1",
+        "blurhash": "LQJjlK~p%yVy^$tQkpV]%%t7ohk9",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-saree-1-375w.avif",
+            "768w": "/images/products/tissue-saree-1-768w.avif",
+            "1080w": "/images/products/tissue-saree-1-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-saree-1-375w.webp",
+            "768w": "/images/products/tissue-saree-1-768w.webp",
+            "1080w": "/images/products/tissue-saree-1-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-saree-1-375w.jpg",
+            "768w": "/images/products/tissue-saree-1-768w.jpg",
+            "1080w": "/images/products/tissue-saree-1-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/tissue-saree-2-1080w.webp",
+        "alt": "Tissue Saree - View 2",
+        "blurhash": "LOH_0[{,xHt7.Sr]spkW%MpHX7X7",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-saree-2-375w.avif",
+            "768w": "/images/products/tissue-saree-2-768w.avif",
+            "1080w": "/images/products/tissue-saree-2-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-saree-2-375w.webp",
+            "768w": "/images/products/tissue-saree-2-768w.webp",
+            "1080w": "/images/products/tissue-saree-2-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-saree-2-375w.jpg",
+            "768w": "/images/products/tissue-saree-2-768w.jpg",
+            "1080w": "/images/products/tissue-saree-2-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/tissue-saree-3-1080w.webp",
+        "alt": "Tissue Saree - View 3",
+        "blurhash": "LVJHRA-CyDt6_MxutRbXxvyCW=V@",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-saree-3-375w.avif",
+            "768w": "/images/products/tissue-saree-3-768w.avif",
+            "1080w": "/images/products/tissue-saree-3-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-saree-3-375w.webp",
+            "768w": "/images/products/tissue-saree-3-768w.webp",
+            "1080w": "/images/products/tissue-saree-3-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-saree-3-375w.jpg",
+            "768w": "/images/products/tissue-saree-3-768w.jpg",
+            "1080w": "/images/products/tissue-saree-3-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/tissue-saree-4-1080w.webp",
+        "alt": "Tissue Saree - View 4",
+        "blurhash": "LQKcnt?]LLw0_NtRgNWC-VxGs:X7",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-saree-4-375w.avif",
+            "768w": "/images/products/tissue-saree-4-768w.avif",
+            "1080w": "/images/products/tissue-saree-4-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-saree-4-375w.webp",
+            "768w": "/images/products/tissue-saree-4-768w.webp",
+            "1080w": "/images/products/tissue-saree-4-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-saree-4-375w.jpg",
+            "768w": "/images/products/tissue-saree-4-768w.jpg",
+            "1080w": "/images/products/tissue-saree-4-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/tissue-saree-5-1080w.webp",
+        "alt": "Tissue Saree - View 5",
+        "blurhash": "LWJ7%R$.tRkU_Lx]t7t7xvx@WoNG",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-saree-5-375w.avif",
+            "768w": "/images/products/tissue-saree-5-768w.avif",
+            "1080w": "/images/products/tissue-saree-5-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-saree-5-375w.webp",
+            "768w": "/images/products/tissue-saree-5-768w.webp",
+            "1080w": "/images/products/tissue-saree-5-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-saree-5-375w.jpg",
+            "768w": "/images/products/tissue-saree-5-768w.jpg",
+            "1080w": "/images/products/tissue-saree-5-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/tissue-saree-6-1080w.webp",
+        "alt": "Tissue Saree - View 6",
+        "blurhash": "LUMOEGt7%2t6~Bxaxtj[x[-oX8R*",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-saree-6-375w.avif",
+            "768w": "/images/products/tissue-saree-6-768w.avif",
+            "1080w": "/images/products/tissue-saree-6-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-saree-6-375w.webp",
+            "768w": "/images/products/tissue-saree-6-768w.webp",
+            "1080w": "/images/products/tissue-saree-6-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-saree-6-375w.jpg",
+            "768w": "/images/products/tissue-saree-6-768w.jpg",
+            "1080w": "/images/products/tissue-saree-6-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/tissue-saree-7-1080w.webp",
+        "alt": "Tissue Saree - View 7",
+        "blurhash": "LSKJ.G?]t,rZ_MtRgMV@tSs;kCkB",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-saree-7-375w.avif",
+            "768w": "/images/products/tissue-saree-7-768w.avif",
+            "1080w": "/images/products/tissue-saree-7-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-saree-7-375w.webp",
+            "768w": "/images/products/tissue-saree-7-768w.webp",
+            "1080w": "/images/products/tissue-saree-7-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-saree-7-375w.jpg",
+            "768w": "/images/products/tissue-saree-7-768w.jpg",
+            "1080w": "/images/products/tissue-saree-7-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/tissue-saree-8-1080w.webp",
+        "alt": "Tissue Saree - View 8",
+        "blurhash": "LWLxe~^%%LjH}?xZkVR+x]kCbbj[",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-saree-8-375w.avif",
+            "768w": "/images/products/tissue-saree-8-768w.avif",
+            "1080w": "/images/products/tissue-saree-8-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-saree-8-375w.webp",
+            "768w": "/images/products/tissue-saree-8-768w.webp",
+            "1080w": "/images/products/tissue-saree-8-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-saree-8-375w.jpg",
+            "768w": "/images/products/tissue-saree-8-768w.jpg",
+            "1080w": "/images/products/tissue-saree-8-1080w.jpg"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "tissue saree",
+      "silk saree",
+      "lightweight",
+      "festive"
+    ],
+    "rating": 4.8,
+    "reviewCount": 0,
+    "isNew": true,
+    "isBestseller": false,
+    "createdAt": "2026-09-22T17:21:51.251Z",
+    "bitmask": [
+      171966532,
+      4259856
+    ]
+  },
+  {
+    "id": 159,
+    "sku": "NC-BANARSI-TISSUE-950",
+    "name": "Banarsi Tissue Saree",
+    "slug": "banarsi-tissue-saree",
+    "brand": "NandiniCollection",
+    "description": "Banarsi Tissue Saree. Lightweight, comfortable and suitable for festive celebrations, parties and everyday elegance. Product details: saree with a graceful drape and premium finish.",
+    "type": "saree",
+    "fabric": "silk",
+    "work": [
+      "zari"
+    ],
+    "occasion": [
+      "festive",
+      "casual"
+    ],
+    "color": "gold",
+    "colors": [
+      "gold",
+      "red",
+      "multi"
+    ],
+    "price": 950,
+    "salePrice": 950,
+    "discount": 0,
+    "priceRange": "under2k",
+    "discountRange": "none",
+    "sizes": [
+      {
+        "size": "Custom",
+        "inStock": true,
+        "quantity": 1
+      },
+      {
+        "size": "XS",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "S",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "M",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "L",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "XL",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "XXL",
+        "inStock": false,
+        "quantity": 0
+      }
+    ],
+    "images": [
+      {
+        "url": "/images/products/banarsi-tissue-saree-1-1080w.webp",
+        "alt": "Banarsi Tissue Saree - View 1",
+        "blurhash": "LKKRCX}[s?=zvr$l-CV],0rwi{Ip",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/banarsi-tissue-saree-1-375w.avif",
+            "768w": "/images/products/banarsi-tissue-saree-1-768w.avif",
+            "1080w": "/images/products/banarsi-tissue-saree-1-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/banarsi-tissue-saree-1-375w.webp",
+            "768w": "/images/products/banarsi-tissue-saree-1-768w.webp",
+            "1080w": "/images/products/banarsi-tissue-saree-1-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/banarsi-tissue-saree-1-375w.jpg",
+            "768w": "/images/products/banarsi-tissue-saree-1-768w.jpg",
+            "1080w": "/images/products/banarsi-tissue-saree-1-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/banarsi-tissue-saree-2-1080w.webp",
+        "alt": "Banarsi Tissue Saree - View 2",
+        "blurhash": "LUMMie]qxuxG||rwt7kB%Mflg3W.",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/banarsi-tissue-saree-2-375w.avif",
+            "768w": "/images/products/banarsi-tissue-saree-2-768w.avif",
+            "1080w": "/images/products/banarsi-tissue-saree-2-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/banarsi-tissue-saree-2-375w.webp",
+            "768w": "/images/products/banarsi-tissue-saree-2-768w.webp",
+            "1080w": "/images/products/banarsi-tissue-saree-2-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/banarsi-tissue-saree-2-375w.jpg",
+            "768w": "/images/products/banarsi-tissue-saree-2-768w.jpg",
+            "1080w": "/images/products/banarsi-tissue-saree-2-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/banarsi-tissue-saree-3-1080w.webp",
+        "alt": "Banarsi Tissue Saree - View 3",
+        "blurhash": "LMKaUK^lrdw5{-$RwhjJ,^whfkOA",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/banarsi-tissue-saree-3-375w.avif",
+            "768w": "/images/products/banarsi-tissue-saree-3-768w.avif",
+            "1080w": "/images/products/banarsi-tissue-saree-3-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/banarsi-tissue-saree-3-375w.webp",
+            "768w": "/images/products/banarsi-tissue-saree-3-768w.webp",
+            "1080w": "/images/products/banarsi-tissue-saree-3-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/banarsi-tissue-saree-3-375w.jpg",
+            "768w": "/images/products/banarsi-tissue-saree-3-768w.jpg",
+            "1080w": "/images/products/banarsi-tissue-saree-3-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/banarsi-tissue-saree-4-1080w.webp",
+        "alt": "Banarsi Tissue Saree - View 4",
+        "blurhash": "LTLAv}=3x[$%|_rstRa{-poMo}bH",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/banarsi-tissue-saree-4-375w.avif",
+            "768w": "/images/products/banarsi-tissue-saree-4-768w.avif",
+            "1080w": "/images/products/banarsi-tissue-saree-4-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/banarsi-tissue-saree-4-375w.webp",
+            "768w": "/images/products/banarsi-tissue-saree-4-768w.webp",
+            "1080w": "/images/products/banarsi-tissue-saree-4-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/banarsi-tissue-saree-4-375w.jpg",
+            "768w": "/images/products/banarsi-tissue-saree-4-768w.jpg",
+            "1080w": "/images/products/banarsi-tissue-saree-4-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/banarsi-tissue-saree-5-1080w.webp",
+        "alt": "Banarsi Tissue Saree - View 5",
+        "blurhash": "LMKHa]}@izw1|H,swNV[,[w0afSe",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/banarsi-tissue-saree-5-375w.avif",
+            "768w": "/images/products/banarsi-tissue-saree-5-768w.avif",
+            "1080w": "/images/products/banarsi-tissue-saree-5-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/banarsi-tissue-saree-5-375w.webp",
+            "768w": "/images/products/banarsi-tissue-saree-5-768w.webp",
+            "1080w": "/images/products/banarsi-tissue-saree-5-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/banarsi-tissue-saree-5-375w.jpg",
+            "768w": "/images/products/banarsi-tissue-saree-5-768w.jpg",
+            "1080w": "/images/products/banarsi-tissue-saree-5-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/banarsi-tissue-saree-6-1080w.webp",
+        "alt": "Banarsi Tissue Saree - View 6",
+        "blurhash": "LLGHrF~BIWIWs9%1nmRk$+V[oLay",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/banarsi-tissue-saree-6-375w.avif",
+            "768w": "/images/products/banarsi-tissue-saree-6-768w.avif",
+            "1080w": "/images/products/banarsi-tissue-saree-6-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/banarsi-tissue-saree-6-375w.webp",
+            "768w": "/images/products/banarsi-tissue-saree-6-768w.webp",
+            "1080w": "/images/products/banarsi-tissue-saree-6-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/banarsi-tissue-saree-6-375w.jpg",
+            "768w": "/images/products/banarsi-tissue-saree-6-768w.jpg",
+            "1080w": "/images/products/banarsi-tissue-saree-6-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/banarsi-tissue-saree-7-1080w.webp",
+        "alt": "Banarsi Tissue Saree - View 7",
+        "blurhash": "LLKI0u}bks%1=~rv%gSK_2xax[Sw",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/banarsi-tissue-saree-7-375w.avif",
+            "768w": "/images/products/banarsi-tissue-saree-7-768w.avif",
+            "1080w": "/images/products/banarsi-tissue-saree-7-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/banarsi-tissue-saree-7-375w.webp",
+            "768w": "/images/products/banarsi-tissue-saree-7-768w.webp",
+            "1080w": "/images/products/banarsi-tissue-saree-7-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/banarsi-tissue-saree-7-375w.jpg",
+            "768w": "/images/products/banarsi-tissue-saree-7-768w.jpg",
+            "1080w": "/images/products/banarsi-tissue-saree-7-1080w.jpg"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "banarsi saree",
+      "tissue saree",
+      "zari",
+      "festive"
+    ],
+    "rating": 4.8,
+    "reviewCount": 0,
+    "isNew": true,
+    "isBestseller": false,
+    "createdAt": "2026-09-22T17:22:31.046Z",
+    "bitmask": [
+      167788612,
+      4259856
+    ]
+  },
+  {
+    "id": 160,
+    "sku": "NC-KOTA-GOTTA-1250",
+    "name": "Kota Doria Saree with Gotapatti Work",
+    "slug": "kota-doria-saree-with-gotapatti-work",
+    "brand": "NandiniCollection",
+    "description": "Kota Doria Saree with Gotapatti Work. Lightweight, comfortable and suitable for festive celebrations, parties and everyday elegance. Product details: saree with a graceful drape and premium finish.",
+    "type": "saree",
+    "fabric": "cotton",
+    "work": [
+      "gota"
+    ],
+    "occasion": [
+      "festive",
+      "casual"
+    ],
+    "color": "multi",
+    "colors": [
+      "multi",
+      "gold",
+      "pink"
+    ],
+    "price": 1250,
+    "salePrice": 1250,
+    "discount": 0,
+    "priceRange": "under2k",
+    "discountRange": "none",
+    "sizes": [
+      {
+        "size": "Custom",
+        "inStock": true,
+        "quantity": 1
+      },
+      {
+        "size": "XS",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "S",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "M",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "L",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "XL",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "XXL",
+        "inStock": false,
+        "quantity": 0
+      }
+    ],
+    "images": [
+      {
+        "url": "/images/products/kota-doria-saree-with-gotapatti-work-1-1080w.webp",
+        "alt": "Kota Doria Saree with Gotapatti Work - View 1",
+        "blurhash": "LLHLJB?IIbxv~pEJW9W9tUj^t8R+",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-1-375w.avif",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-1-768w.avif",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-1-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-1-375w.webp",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-1-768w.webp",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-1-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-1-375w.jpg",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-1-768w.jpg",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-1-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-doria-saree-with-gotapatti-work-2-1080w.webp",
+        "alt": "Kota Doria Saree with Gotapatti Work - View 2",
+        "blurhash": "LSI5Sh_MRRx[-;%LRkt6NHV[ofaf",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-2-375w.avif",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-2-768w.avif",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-2-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-2-375w.webp",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-2-768w.webp",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-2-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-2-375w.jpg",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-2-768w.jpg",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-2-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-doria-saree-with-gotapatti-work-3-1080w.webp",
+        "alt": "Kota Doria Saree with Gotapatti Work - View 3",
+        "blurhash": "LLIOkD~qWFx[_3%MV[oyIWWVf8ay",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-3-375w.avif",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-3-768w.avif",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-3-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-3-375w.webp",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-3-768w.webp",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-3-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-3-375w.jpg",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-3-768w.jpg",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-3-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-doria-saree-with-gotapatti-work-4-1080w.webp",
+        "alt": "Kota Doria Saree with Gotapatti Work - View 4",
+        "blurhash": "LPIE-A.SVZx]_Ns:R%V[XSjIkVoM",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-4-375w.avif",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-4-768w.avif",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-4-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-4-375w.webp",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-4-768w.webp",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-4-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-4-375w.jpg",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-4-768w.jpg",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-4-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-doria-saree-with-gotapatti-work-5-1080w.webp",
+        "alt": "Kota Doria Saree with Gotapatti Work - View 5",
+        "blurhash": "LZHeIK?^w}xu-qx]afjGWBWBkBaf",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-5-375w.avif",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-5-768w.avif",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-5-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-5-375w.webp",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-5-768w.webp",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-5-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-5-375w.jpg",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-5-768w.jpg",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-5-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-doria-saree-with-gotapatti-work-6-1080w.webp",
+        "alt": "Kota Doria Saree with Gotapatti Work - View 6",
+        "blurhash": "LVHB@~~pNLxuo}%MWCR+o4f8j[WC",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-6-375w.avif",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-6-768w.avif",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-6-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-6-375w.webp",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-6-768w.webp",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-6-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-saree-with-gotapatti-work-6-375w.jpg",
+            "768w": "/images/products/kota-doria-saree-with-gotapatti-work-6-768w.jpg",
+            "1080w": "/images/products/kota-doria-saree-with-gotapatti-work-6-1080w.jpg"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "kota doria",
+      "gotapatti",
+      "handwork",
+      "festive"
+    ],
+    "rating": 4.8,
+    "reviewCount": 0,
+    "isNew": true,
+    "isBestseller": false,
+    "createdAt": "2026-09-22T17:23:00.835Z",
+    "bitmask": [
+      167772292,
+      4292608
+    ]
+  },
+  {
+    "id": 161,
+    "sku": "NC-KOTA-SILK-1450",
+    "name": "Kota Silk Saree",
+    "slug": "kota-silk-saree",
+    "brand": "NandiniCollection",
+    "description": "Kota Silk Saree. Lightweight, comfortable and suitable for festive celebrations, parties and everyday elegance. Product details: saree with a graceful drape and premium finish.",
+    "type": "saree",
+    "fabric": "silk",
+    "work": [
+      "plain"
+    ],
+    "occasion": [
+      "festive",
+      "casual"
+    ],
+    "color": "multi",
+    "colors": [
+      "multi",
+      "gold",
+      "pink"
+    ],
+    "price": 1450,
+    "salePrice": 1450,
+    "discount": 0,
+    "priceRange": "under2k",
+    "discountRange": "none",
+    "sizes": [
+      {
+        "size": "Custom",
+        "inStock": true,
+        "quantity": 1
+      },
+      {
+        "size": "XS",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "S",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "M",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "L",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "XL",
+        "inStock": false,
+        "quantity": 0
+      },
+      {
+        "size": "XXL",
+        "inStock": false,
+        "quantity": 0
+      }
+    ],
+    "images": [
+      {
+        "url": "/images/products/kota-silk-saree-1-1080w.webp",
+        "alt": "Kota Silk Saree - View 1",
+        "blurhash": "LGJYJ4^,sanE}2xwo$t9%fozozo|",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-silk-saree-1-375w.avif",
+            "768w": "/images/products/kota-silk-saree-1-768w.avif",
+            "1080w": "/images/products/kota-silk-saree-1-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-silk-saree-1-375w.webp",
+            "768w": "/images/products/kota-silk-saree-1-768w.webp",
+            "1080w": "/images/products/kota-silk-saree-1-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-silk-saree-1-375w.jpg",
+            "768w": "/images/products/kota-silk-saree-1-768w.jpg",
+            "1080w": "/images/products/kota-silk-saree-1-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-silk-saree-2-1080w.webp",
+        "alt": "Kota Silk Saree - View 2",
+        "blurhash": "LSJQG@%Jnnob~6xtWFaxtTV@f+af",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-silk-saree-2-375w.avif",
+            "768w": "/images/products/kota-silk-saree-2-768w.avif",
+            "1080w": "/images/products/kota-silk-saree-2-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-silk-saree-2-375w.webp",
+            "768w": "/images/products/kota-silk-saree-2-768w.webp",
+            "1080w": "/images/products/kota-silk-saree-2-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-silk-saree-2-375w.jpg",
+            "768w": "/images/products/kota-silk-saree-2-768w.jpg",
+            "1080w": "/images/products/kota-silk-saree-2-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-silk-saree-3-1080w.webp",
+        "alt": "Kota Silk Saree - View 3",
+        "blurhash": "LOINgc-;x@%d~oo#XRtQOHSiR.R.",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-silk-saree-3-375w.avif",
+            "768w": "/images/products/kota-silk-saree-3-768w.avif",
+            "1080w": "/images/products/kota-silk-saree-3-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-silk-saree-3-375w.webp",
+            "768w": "/images/products/kota-silk-saree-3-768w.webp",
+            "1080w": "/images/products/kota-silk-saree-3-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-silk-saree-3-375w.jpg",
+            "768w": "/images/products/kota-silk-saree-3-768w.jpg",
+            "1080w": "/images/products/kota-silk-saree-3-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-silk-saree-4-1080w.webp",
+        "alt": "Kota Silk Saree - View 4",
+        "blurhash": "LEJYe%=R?GRp{Vw6t6ai%#b^sDoy",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-silk-saree-4-375w.avif",
+            "768w": "/images/products/kota-silk-saree-4-768w.avif",
+            "1080w": "/images/products/kota-silk-saree-4-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-silk-saree-4-375w.webp",
+            "768w": "/images/products/kota-silk-saree-4-768w.webp",
+            "1080w": "/images/products/kota-silk-saree-4-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-silk-saree-4-375w.jpg",
+            "768w": "/images/products/kota-silk-saree-4-768w.jpg",
+            "1080w": "/images/products/kota-silk-saree-4-1080w.jpg"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "kota silk",
+      "silk saree",
+      "lightweight",
+      "festive"
+    ],
+    "rating": 4.8,
+    "reviewCount": 0,
+    "isNew": true,
+    "isBestseller": false,
+    "createdAt": "2026-09-22T17:23:24.532Z",
+    "bitmask": [
+      171966532,
+      4292608
+    ]
+  },
+  {
+    "id": 162,
+    "sku": "NC-TISSUE-SILK-SUIT-1450",
+    "name": "Tissue Silk Suit Set",
+    "slug": "tissue-silk-suit-set",
+    "brand": "NandiniCollection",
+    "description": "Tissue Silk Suit Set. Lightweight, comfortable and suitable for festive celebrations, parties and everyday elegance. Product details: unstitched suit set with a graceful drape and premium finish.",
+    "type": "kurta",
+    "fabric": "silk",
+    "work": [
+      "plain"
+    ],
+    "occasion": [
+      "festive",
+      "casual"
+    ],
+    "color": "multi",
+    "colors": [
+      "multi",
+      "gold",
+      "pink"
+    ],
+    "price": 1450,
+    "salePrice": 1450,
+    "discount": 0,
+    "priceRange": "under2k",
+    "discountRange": "none",
+    "sizes": [
+      {
+        "size": "XS",
+        "inStock": true,
+        "quantity": 4
+      },
+      {
+        "size": "S",
+        "inStock": true,
+        "quantity": 8
+      },
+      {
+        "size": "M",
+        "inStock": true,
+        "quantity": 12
+      },
+      {
+        "size": "L",
+        "inStock": true,
+        "quantity": 10
+      },
+      {
+        "size": "XL",
+        "inStock": true,
+        "quantity": 6
+      },
+      {
+        "size": "XXL",
+        "inStock": true,
+        "quantity": 3
+      },
+      {
+        "size": "Custom",
+        "inStock": true,
+        "quantity": 5
+      }
+    ],
+    "images": [
+      {
+        "url": "/images/products/tissue-silk-suit-set-1-1080w.webp",
+        "alt": "Tissue Silk Suit Set - View 1",
+        "blurhash": "LMLfBb_N?btm+FrCVrw[S$j]wInN",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-silk-suit-set-1-375w.avif",
+            "768w": "/images/products/tissue-silk-suit-set-1-768w.avif",
+            "1080w": "/images/products/tissue-silk-suit-set-1-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-silk-suit-set-1-375w.webp",
+            "768w": "/images/products/tissue-silk-suit-set-1-768w.webp",
+            "1080w": "/images/products/tissue-silk-suit-set-1-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-silk-suit-set-1-375w.jpg",
+            "768w": "/images/products/tissue-silk-suit-set-1-768w.jpg",
+            "1080w": "/images/products/tissue-silk-suit-set-1-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/tissue-silk-suit-set-2-1080w.webp",
+        "alt": "Tissue Silk Suit Set - View 2",
+        "blurhash": "LQJaZR_4%$tA-4ronfs%SQs:%Mob",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-silk-suit-set-2-375w.avif",
+            "768w": "/images/products/tissue-silk-suit-set-2-768w.avif",
+            "1080w": "/images/products/tissue-silk-suit-set-2-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-silk-suit-set-2-375w.webp",
+            "768w": "/images/products/tissue-silk-suit-set-2-768w.webp",
+            "1080w": "/images/products/tissue-silk-suit-set-2-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-silk-suit-set-2-375w.jpg",
+            "768w": "/images/products/tissue-silk-suit-set-2-768w.jpg",
+            "1080w": "/images/products/tissue-silk-suit-set-2-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/tissue-silk-suit-set-3-1080w.webp",
+        "alt": "Tissue Silk Suit Set - View 3",
+        "blurhash": "LLI#Z1?d.A$-=riuM_RORqRPxakQ",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/tissue-silk-suit-set-3-375w.avif",
+            "768w": "/images/products/tissue-silk-suit-set-3-768w.avif",
+            "1080w": "/images/products/tissue-silk-suit-set-3-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/tissue-silk-suit-set-3-375w.webp",
+            "768w": "/images/products/tissue-silk-suit-set-3-768w.webp",
+            "1080w": "/images/products/tissue-silk-suit-set-3-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/tissue-silk-suit-set-3-375w.jpg",
+            "768w": "/images/products/tissue-silk-suit-set-3-768w.jpg",
+            "1080w": "/images/products/tissue-silk-suit-set-3-1080w.jpg"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "tissue silk",
+      "suit set",
+      "silk",
+      "festive"
+    ],
+    "rating": 4.8,
+    "reviewCount": 0,
+    "isNew": true,
+    "isBestseller": false,
+    "createdAt": "2026-09-22T17:23:38.656Z",
+    "bitmask": [
+      171966529,
+      4292608
+    ]
+  },
+  {
+    "id": 163,
+    "sku": "NC-KOTA-PRINTED-SUIT-1100",
+    "name": "Kota Doria Printed Suit Set",
+    "slug": "kota-doria-printed-suit-set",
+    "brand": "NandiniCollection",
+    "description": "Kota Doria Printed Suit Set. Lightweight, comfortable and suitable for festive celebrations, parties and everyday elegance. Product details: unstitched suit set with a graceful drape and premium finish.",
+    "type": "kurta",
+    "fabric": "cotton",
+    "work": [
+      "printed"
+    ],
+    "occasion": [
+      "festive",
+      "casual"
+    ],
+    "color": "multi",
+    "colors": [
+      "multi",
+      "pink",
+      "yellow"
+    ],
+    "price": 1100,
+    "salePrice": 1100,
+    "discount": 0,
+    "priceRange": "under2k",
+    "discountRange": "none",
+    "sizes": [
+      {
+        "size": "XS",
+        "inStock": true,
+        "quantity": 4
+      },
+      {
+        "size": "S",
+        "inStock": true,
+        "quantity": 8
+      },
+      {
+        "size": "M",
+        "inStock": true,
+        "quantity": 12
+      },
+      {
+        "size": "L",
+        "inStock": true,
+        "quantity": 10
+      },
+      {
+        "size": "XL",
+        "inStock": true,
+        "quantity": 6
+      },
+      {
+        "size": "XXL",
+        "inStock": true,
+        "quantity": 3
+      },
+      {
+        "size": "Custom",
+        "inStock": true,
+        "quantity": 5
+      }
+    ],
+    "images": [
+      {
+        "url": "/images/products/kota-doria-printed-suit-set-1-1080w.webp",
+        "alt": "Kota Doria Printed Suit Set - View 1",
+        "blurhash": "LPJ%abxL?^-=^bw?R5Vr%cx?RRae",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-printed-suit-set-1-375w.avif",
+            "768w": "/images/products/kota-doria-printed-suit-set-1-768w.avif",
+            "1080w": "/images/products/kota-doria-printed-suit-set-1-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-printed-suit-set-1-375w.webp",
+            "768w": "/images/products/kota-doria-printed-suit-set-1-768w.webp",
+            "1080w": "/images/products/kota-doria-printed-suit-set-1-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-printed-suit-set-1-375w.jpg",
+            "768w": "/images/products/kota-doria-printed-suit-set-1-768w.jpg",
+            "1080w": "/images/products/kota-doria-printed-suit-set-1-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-doria-printed-suit-set-2-1080w.webp",
+        "alt": "Kota Doria Printed Suit Set - View 2",
+        "blurhash": "LZNRJ@pc?b-;}ZVZMyV@-;$*NvM{",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-printed-suit-set-2-375w.avif",
+            "768w": "/images/products/kota-doria-printed-suit-set-2-768w.avif",
+            "1080w": "/images/products/kota-doria-printed-suit-set-2-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-printed-suit-set-2-375w.webp",
+            "768w": "/images/products/kota-doria-printed-suit-set-2-768w.webp",
+            "1080w": "/images/products/kota-doria-printed-suit-set-2-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-printed-suit-set-2-375w.jpg",
+            "768w": "/images/products/kota-doria-printed-suit-set-2-768w.jpg",
+            "1080w": "/images/products/kota-doria-printed-suit-set-2-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-doria-printed-suit-set-3-1080w.webp",
+        "alt": "Kota Doria Printed Suit Set - View 3",
+        "blurhash": "LcM$0{.9-;?H|NR6M{V@$+$+kCM|",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-printed-suit-set-3-375w.avif",
+            "768w": "/images/products/kota-doria-printed-suit-set-3-768w.avif",
+            "1080w": "/images/products/kota-doria-printed-suit-set-3-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-printed-suit-set-3-375w.webp",
+            "768w": "/images/products/kota-doria-printed-suit-set-3-768w.webp",
+            "1080w": "/images/products/kota-doria-printed-suit-set-3-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-printed-suit-set-3-375w.jpg",
+            "768w": "/images/products/kota-doria-printed-suit-set-3-768w.jpg",
+            "1080w": "/images/products/kota-doria-printed-suit-set-3-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-doria-printed-suit-set-4-1080w.webp",
+        "alt": "Kota Doria Printed Suit Set - View 4",
+        "blurhash": "LOK15h?w_4?c}:e7V?oIx[%1WCM_",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-printed-suit-set-4-375w.avif",
+            "768w": "/images/products/kota-doria-printed-suit-set-4-768w.avif",
+            "1080w": "/images/products/kota-doria-printed-suit-set-4-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-printed-suit-set-4-375w.webp",
+            "768w": "/images/products/kota-doria-printed-suit-set-4-768w.webp",
+            "1080w": "/images/products/kota-doria-printed-suit-set-4-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-printed-suit-set-4-375w.jpg",
+            "768w": "/images/products/kota-doria-printed-suit-set-4-768w.jpg",
+            "1080w": "/images/products/kota-doria-printed-suit-set-4-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/kota-doria-printed-suit-set-5-1080w.webp",
+        "alt": "Kota Doria Printed Suit Set - View 5",
+        "blurhash": "LMOA[Y?c?^.S;RvhMxVZcDoMoyR6",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/kota-doria-printed-suit-set-5-375w.avif",
+            "768w": "/images/products/kota-doria-printed-suit-set-5-768w.avif",
+            "1080w": "/images/products/kota-doria-printed-suit-set-5-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/kota-doria-printed-suit-set-5-375w.webp",
+            "768w": "/images/products/kota-doria-printed-suit-set-5-768w.webp",
+            "1080w": "/images/products/kota-doria-printed-suit-set-5-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/kota-doria-printed-suit-set-5-375w.jpg",
+            "768w": "/images/products/kota-doria-printed-suit-set-5-768w.jpg",
+            "1080w": "/images/products/kota-doria-printed-suit-set-5-1080w.jpg"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "kota doria",
+      "printed suit",
+      "unstitched",
+      "dress material"
+    ],
+    "rating": 4.8,
+    "reviewCount": 0,
+    "isNew": true,
+    "isBestseller": false,
+    "createdAt": "2026-09-22T17:24:04.228Z",
+    "bitmask": [
+      169869441,
+      4292608
+    ]
+  },
+  {
+    "id": 164,
+    "sku": "NC-SOFT-SILK-KOTA-1350-A",
+    "name": "Soft Silk Kota Doria Suit Set Design 01",
+    "slug": "soft-silk-kota-doria-suit-set-design-01",
+    "brand": "NandiniCollection",
+    "description": "Soft Silk Kota Doria Suit Set Design 01. Lightweight, comfortable and suitable for festive celebrations, parties and everyday elegance. Product details: unstitched suit set with a graceful drape and premium finish.",
+    "type": "kurta",
+    "fabric": "silk",
+    "work": [
+      "plain"
+    ],
+    "occasion": [
+      "festive",
+      "casual"
+    ],
+    "color": "multi",
+    "colors": [
+      "multi",
+      "pink",
+      "gold"
+    ],
+    "price": 1350,
+    "salePrice": 1350,
+    "discount": 0,
+    "priceRange": "under2k",
+    "discountRange": "none",
+    "sizes": [
+      {
+        "size": "XS",
+        "inStock": true,
+        "quantity": 4
+      },
+      {
+        "size": "S",
+        "inStock": true,
+        "quantity": 8
+      },
+      {
+        "size": "M",
+        "inStock": true,
+        "quantity": 12
+      },
+      {
+        "size": "L",
+        "inStock": true,
+        "quantity": 10
+      },
+      {
+        "size": "XL",
+        "inStock": true,
+        "quantity": 6
+      },
+      {
+        "size": "XXL",
+        "inStock": true,
+        "quantity": 3
+      },
+      {
+        "size": "Custom",
+        "inStock": true,
+        "quantity": 5
+      }
+    ],
+    "images": [
+      {
+        "url": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-1080w.webp",
+        "alt": "Soft Silk Kota Doria Suit Set Design 01 - View 1",
+        "blurhash": "LMI5GK_N?v-;%MRkjsWCSzRkM{Rj",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-375w.avif",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-768w.avif",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-375w.webp",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-768w.webp",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-375w.jpg",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-768w.jpg",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-01-1-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-1080w.webp",
+        "alt": "Soft Silk Kota Doria Suit Set Design 01 - View 2",
+        "blurhash": "LUFH04_N-;^+T_S}NZWBxutRV[Rj",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-375w.avif",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-768w.avif",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-375w.webp",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-768w.webp",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-375w.jpg",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-768w.jpg",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-01-2-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-1080w.webp",
+        "alt": "Soft Silk Kota Doria Suit Set Design 01 - View 3",
+        "blurhash": "LQJRN*_4.9%O?ExAROV@ogt7WAV?",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-375w.avif",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-768w.avif",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-375w.webp",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-768w.webp",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-375w.jpg",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-768w.jpg",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-01-3-1080w.jpg"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "soft silk",
+      "kota doria",
+      "unstitched",
+      "dress material",
+      "design 01"
+    ],
+    "rating": 4.8,
+    "reviewCount": 0,
+    "isNew": true,
+    "isBestseller": false,
+    "createdAt": "2026-09-22T17:24:14.198Z",
+    "bitmask": [
+      171966529,
+      4292608
+    ]
+  },
+  {
+    "id": 165,
+    "sku": "NC-SOFT-SILK-KOTA-1350-B",
+    "name": "Soft Silk Kota Doria Suit Set Design 02",
+    "slug": "soft-silk-kota-doria-suit-set-design-02",
+    "brand": "NandiniCollection",
+    "description": "Soft Silk Kota Doria Suit Set Design 02. Lightweight, comfortable and suitable for festive celebrations, parties and everyday elegance. Product details: unstitched suit set with a graceful drape and premium finish.",
+    "type": "kurta",
+    "fabric": "silk",
+    "work": [
+      "plain"
+    ],
+    "occasion": [
+      "festive",
+      "casual"
+    ],
+    "color": "multi",
+    "colors": [
+      "multi",
+      "pink",
+      "gold"
+    ],
+    "price": 1350,
+    "salePrice": 1350,
+    "discount": 0,
+    "priceRange": "under2k",
+    "discountRange": "none",
+    "sizes": [
+      {
+        "size": "XS",
+        "inStock": true,
+        "quantity": 4
+      },
+      {
+        "size": "S",
+        "inStock": true,
+        "quantity": 8
+      },
+      {
+        "size": "M",
+        "inStock": true,
+        "quantity": 12
+      },
+      {
+        "size": "L",
+        "inStock": true,
+        "quantity": 10
+      },
+      {
+        "size": "XL",
+        "inStock": true,
+        "quantity": 6
+      },
+      {
+        "size": "XXL",
+        "inStock": true,
+        "quantity": 3
+      },
+      {
+        "size": "Custom",
+        "inStock": true,
+        "quantity": 5
+      }
+    ],
+    "images": [
+      {
+        "url": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-1080w.webp",
+        "alt": "Soft Silk Kota Doria Suit Set Design 02 - View 1",
+        "blurhash": "LNH_DG?KThx_=;$us5siT1xuxuxW",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-375w.avif",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-768w.avif",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-375w.webp",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-768w.webp",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-375w.jpg",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-768w.jpg",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-1-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-1080w.webp",
+        "alt": "Soft Silk Kota Doria Suit Set Design 02 - View 2",
+        "blurhash": "LDKI}G8w_MQ-7^q_xuMytlNYoeb]",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-375w.avif",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-768w.avif",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-375w.webp",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-768w.webp",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-375w.jpg",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-768w.jpg",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-2-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-1080w.webp",
+        "alt": "Soft Silk Kota Doria Suit Set Design 02 - View 3",
+        "blurhash": "LUIhdE?wyF%O?Fxrs+oIo$xvt7WB",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-375w.avif",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-768w.avif",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-375w.webp",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-768w.webp",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-375w.jpg",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-768w.jpg",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-3-1080w.jpg"
+          }
+        }
+      },
+      {
+        "url": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-1080w.webp",
+        "alt": "Soft Silk Kota Doria Suit Set Design 02 - View 4",
+        "blurhash": "LQM4p=?bt,%M|u+]nii_yD%Mxtj]",
+        "width": 1080,
+        "height": 1440,
+        "sources": {
+          "avif": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-375w.avif",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-768w.avif",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-1080w.avif"
+          },
+          "webp": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-375w.webp",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-768w.webp",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-1080w.webp"
+          },
+          "jpeg": {
+            "375w": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-375w.jpg",
+            "768w": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-768w.jpg",
+            "1080w": "/images/products/soft-silk-kota-doria-suit-set-design-02-4-1080w.jpg"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "soft silk",
+      "kota doria",
+      "unstitched",
+      "dress material",
+      "design 02"
+    ],
+    "rating": 4.8,
+    "reviewCount": 0,
+    "isNew": true,
+    "isBestseller": false,
+    "createdAt": "2026-09-22T17:24:27.273Z",
+    "bitmask": [
+      171966529,
+      4292608
+    ]
   }
 ]
