@@ -16,6 +16,7 @@ import { Toast } from './components/shared/Toast';
 import { Footer } from './components/layout/Footer';
 import { MobileNav } from './components/layout/MobileNav';
 import { PolicyModal, type PolicySection } from './components/shared/PolicyModal';
+import { WhatsAppButton } from './components/shared/WhatsAppButton';
 import type { Product } from './types/product';
 
 export const App: React.FC = () => {
@@ -126,6 +127,9 @@ export const App: React.FC = () => {
 
       {/* Footer layout */}
       <Footer onOpenPolicy={setOpenPolicy} />
+
+      {/* Persistent customer support entry point. Product pages include the selected product in the message. */}
+      <WhatsAppButton product={selectedProduct} />
 
       <PolicyModal section={openPolicy} onClose={() => setOpenPolicy(null)} />
 
