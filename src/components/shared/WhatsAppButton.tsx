@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Product } from '../../types/product';
 
-const WHATSAPP_NUMBER = '919057955597';
+const WHATSAPP_NUMBER = '918824122515';
 
 interface WhatsAppButtonProps {
   product?: Product | null;
