@@ -47,9 +47,18 @@ export const ProductCard: React.FC<ProductCardProps> = React.memo(({
   return (
     <div
       onClick={() => onSelect(product)}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          onSelect(product);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={`View ${product.name}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group relative flex flex-col overflow-hidden rounded-sm border border-stone-200/80 bg-white cursor-pointer shadow-[0_8px_25px_rgba(55,45,35,0.04)] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(55,45,35,0.12)]"
+      className="group relative flex flex-col overflow-hidden rounded-sm border border-stone-200/80 bg-white cursor-pointer shadow-[0_8px_25px_rgba(55,45,35,0.04)] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(55,45,35,0.12)] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
       style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}
     >
       {/* Visual & Image Wrap */}

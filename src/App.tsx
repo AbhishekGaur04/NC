@@ -1,5 +1,5 @@
 // ─── App Root Shell Component ────────────────────────────────────────────────
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useFilterStore } from './app/providers/filter-store';
 import { useCartStore } from './app/providers/cart-store';
 import { useFilterEngine } from './hooks/useFilterEngine';
@@ -33,6 +33,17 @@ export const App: React.FC = () => {
 
   // Cart operations
   const openCart = useCartStore((state) => state.openCart);
+
+  useEffect(() => {
+    const canonicalUrl = `${window.location.origin}${window.location.pathname}`;
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalUrl;
+  }, []);
 
   const handleSelectProduct = (product: Product) => {
     setSelectedProduct(product);

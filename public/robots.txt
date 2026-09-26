@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# This is a public storefront. Do not use robots.txt as access control.

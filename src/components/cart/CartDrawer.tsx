@@ -39,11 +39,11 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ onCheckout }) => {
       {/* Click backdrop to close */}
       <div className="absolute inset-0" onClick={closeCart} />
 
-      <div className="relative w-full max-w-md bg-white h-full shadow-2xl flex flex-col animate-slide-left">
+      <div className="relative w-full max-w-md bg-white h-full shadow-2xl flex flex-col animate-slide-left" role="dialog" aria-modal="true" aria-labelledby="cart-title">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-stone-100">
           <div className="flex items-baseline gap-2">
-            <h3 className="text-lg font-serif text-stone-900">Your Atelier Cart</h3>
+            <h3 id="cart-title" className="text-lg font-serif text-stone-900">Your Atelier Cart</h3>
             <span className="text-xs text-stone-400 font-medium">({items.length} items)</span>
           </div>
           <button

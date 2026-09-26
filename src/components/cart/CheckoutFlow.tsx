@@ -11,6 +11,7 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
   const { items, totalPrice, totalDiscount, checkout } = useCartStore();
   const [step, setStep] = useState<1 | 2 | 3>(1); // 1: Delivery, 2: Payment, 3: Success
   const [isProcessing, setIsProcessing] = useState(false);
+  const [addressError, setAddressError] = useState<string | null>(null);
   const [address, setAddress] = useState({
     name: 'Nandini Sen',
     phone: '+91 98765 43210',
@@ -32,6 +33,12 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
 
   const handleNext = () => {
     if (step === 1) {
+      const hasMissingAddress = Object.values(address).some((value) => !value.trim());
+      if (hasMissingAddress) {
+        setAddressError('Please complete every delivery address field before continuing.');
+        return;
+      }
+      setAddressError(null);
       setStep(2);
     }
   };
@@ -83,12 +90,12 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in">
-      <div className="w-full max-w-2xl bg-white border border-stone-100 rounded-lg shadow-2xl flex flex-col md:flex-row overflow-hidden animate-scale-up max-h-[90vh]">
+      <div className="w-full max-w-2xl bg-white border border-stone-100 rounded-lg shadow-2xl flex flex-col md:flex-row overflow-hidden animate-scale-up max-h-[90vh]" role="dialog" aria-modal="true" aria-label="Checkout dialog">
         {/* Main Content Area */}
         <div className="flex-1 p-6 md:p-8 overflow-y-auto custom-scroll">
           {step < 3 && (
             <div className="flex items-center justify-between mb-6 pb-2 border-b border-stone-100">
-              <h3 className="text-xl font-serif text-stone-900">Secure Checkout</h3>
+              <h3 id="checkout-title" className="text-xl font-serif text-stone-900">Secure Checkout</h3>
               <div className="flex gap-2 text-xs font-semibold text-stone-400">
                 <span className={step === 1 ? 'text-amber-700' : 'text-emerald-600'}>
                   1. Delivery
@@ -194,6 +201,12 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                   View shipping & exchanges
                 </button>
               </p>
+
+              {addressError && (
+                <p role="alert" className="rounded-md border border-rose-100 bg-rose-50 p-3 text-xs font-semibold text-rose-700">
+                  {addressError}
+                </p>
+              )}
 
               <div className="flex gap-3 justify-end pt-6">
                 <button

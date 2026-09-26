@@ -50,7 +50,7 @@ export const QuickView: React.FC<QuickViewProps> = ({ product, onClose }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in">
       <div className="absolute inset-0" onClick={onClose} />
 
-      <div className="relative w-full max-w-3xl bg-white border border-stone-100 rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row animate-scale-up max-h-[90vh]">
+      <div className="relative w-full max-w-3xl bg-white border border-stone-100 rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row animate-scale-up max-h-[90vh]" role="dialog" aria-modal="true" aria-labelledby="quick-view-title">
         {/* Close Button */}
         <button
           type="button"
@@ -78,7 +78,7 @@ export const QuickView: React.FC<QuickViewProps> = ({ product, onClose }) => {
               <span className="text-[10px] font-bold tracking-widest uppercase text-stone-400">
                 Nandini Collection
               </span>
-              <h3 className="font-serif text-xl font-medium text-stone-900 mt-1 capitalize">
+              <h3 id="quick-view-title" className="font-serif text-xl font-medium text-stone-900 mt-1 capitalize">
                 {product.name}
               </h3>
               <p className="text-xs text-stone-400 mt-0.5 capitalize">

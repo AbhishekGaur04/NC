@@ -38,13 +38,13 @@ export const HeroBanner: React.FC = () => {
         {/* Visual Showcase collage */}
         <div className="flex w-full max-w-md select-none justify-center gap-3 sm:gap-4">
           <div className="h-48 w-32 rotate-[-5deg] overflow-hidden rounded-sm bg-stone-200 shadow-lg transition-transform duration-500 hover:rotate-0 sm:h-56 sm:w-36">
-            <img src="/images/products/kota-doria-embroidered-suit-set-rose-pink-1-768w.jpg" alt="Rose pink embroidered suit set" className="h-full w-full object-cover" />
+            <img src="/images/products/kota-doria-embroidered-suit-set-rose-pink-1-768w.jpg" alt="Rose pink embroidered suit set" width="288" height="448" fetchPriority="high" decoding="async" className="h-full w-full object-cover" />
           </div>
           <div className="z-10 h-56 w-36 translate-y-3 scale-105 overflow-hidden rounded-sm border border-white bg-stone-200 shadow-xl sm:h-64 sm:w-40">
-            <img src="/images/products/nazakat-pure-chiffon-saree-with-exquisite-gota-patti-1-768w.jpg" alt="Nazakat chiffon saree with gota patti" className="h-full w-full object-cover" />
+            <img src="/images/products/nazakat-pure-chiffon-saree-with-exquisite-gota-patti-1-768w.jpg" alt="Nazakat chiffon saree with gota patti" width="320" height="512" fetchPriority="high" decoding="async" className="h-full w-full object-cover" />
           </div>
           <div className="h-48 w-32 rotate-[5deg] overflow-hidden rounded-sm bg-stone-200 shadow-lg transition-transform duration-500 hover:rotate-0 sm:h-56 sm:w-36">
-            <img src="/images/products/gota-pure-chiffon-saree-with-gotapatti-handwork-1-768w.jpg" alt="Gota patti chiffon saree" className="h-full w-full object-cover" />
+            <img src="/images/products/gota-pure-chiffon-saree-with-gotapatti-handwork-1-768w.jpg" alt="Gota patti chiffon saree" width="288" height="448" loading="lazy" decoding="async" className="h-full w-full object-cover" />
           </div>
         </div>
       </div>
