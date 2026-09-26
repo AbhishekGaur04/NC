@@ -36,16 +36,49 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
     }
   };
 
+  const buildWhatsAppInvoice = () => {
+    const orderId = `NC-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`;
+    const imageBaseUrl = window.location.origin;
+    const lines = items.flatMap((item) => [
+      `${item.product.name}`,
+      `SKU: ${item.product.sku || `NC-${item.product.id}`} | Size: ${item.size} | Qty: ${item.quantity}`,
+      `Unit price: ${formatPrice(item.product.salePrice)} | Line total: ${formatPrice(item.product.salePrice * item.quantity)}`,
+      `Product images: ${item.product.images.map((image) => `${imageBaseUrl}${image.url}`).join(' | ')}`,
+      '',
+    ]);
+
+    return [
+      'NANDINI COLLECTION — ORDER INVOICE',
+      `Order ID: ${orderId}`,
+      '',
+      'CUSTOMER & DELIVERY DETAILS',
+      `Name: ${address.name}`,
+      `Phone: ${address.phone}`,
+      `Address: ${address.street}, ${address.city}, ${address.state} - ${address.pincode}`,
+      '',
+      'ORDER ITEMS',
+      ...lines,
+      'BILL SUMMARY',
+      `Gross price: ${formatPrice(totalPrice)}`,
+      `Discount: -${formatPrice(totalDiscount)}`,
+      `Net payable: ${formatPrice(totalPrice - totalDiscount)}`,
+      'Payment mode: WhatsApp order confirmation',
+      '',
+      'Please confirm availability and share the payment instructions. The product image link is included above for each item.',
+    ].join('\n');
+  };
+
   const handlePayment = async () => {
     setIsProcessing(true);
-    // Simulate API delay
-    setTimeout(async () => {
-      const success = await checkout();
-      setIsProcessing(false);
-      if (success) {
-        setStep(3);
-      }
-    }, 1500);
+    const invoice = buildWhatsAppInvoice();
+    const whatsappUrl = `https://wa.me/918824122515?text=${encodeURIComponent(invoice)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+    const success = await checkout();
+    setIsProcessing(false);
+    if (success) {
+      setStep(3);
+    }
   };
 
   return (
@@ -182,66 +215,16 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
           )}
 
           {step === 2 && (
-            /* STEP 2: PAYMENT CARD DETAILS */
+            /* STEP 2: WHATSAPP ORDER CONFIRMATION */
             <div className="space-y-4">
               <h4 className="text-sm font-bold uppercase tracking-wider text-stone-700 mb-2">
-                Card Payment Details
+                Confirm Order on WhatsApp
               </h4>
 
               <div className="space-y-3.5">
-                <div className="bg-amber-50/50 border border-amber-100 rounded-md p-3 text-xs text-amber-800 flex items-center gap-2">
-                  <span>🔒</span>
-                  <span>Payment is encrypted and processed via bank secure gateway.</span>
-                </div>
-
-                <div>
-                  <label className="block text-[10px] font-semibold text-stone-500 uppercase mb-1">
-                    Cardholder Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    defaultValue="Nandini Sen"
-                    className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm text-stone-855"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-[10px] font-semibold text-stone-500 uppercase mb-1">
-                    Card Number
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="••••  ••••  ••••  4321"
-                    className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm tracking-widest text-stone-855"
-                  />
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[10px] font-semibold text-stone-500 uppercase mb-1">
-                      Expiry Date
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="MM/YY"
-                      className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm text-stone-855"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[10px] font-semibold text-stone-500 uppercase mb-1">
-                      CVV Code
-                    </label>
-                    <input
-                      type="password"
-                      required
-                      placeholder="•••"
-                      maxLength={3}
-                      className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm text-stone-855"
-                    />
-                  </div>
+                <div className="bg-emerald-50 border border-emerald-100 rounded-md p-3 text-xs text-emerald-800 flex items-start gap-2">
+                  <span>💬</span>
+                  <span>Your complete bill, delivery address, item sizes, quantities, prices and product image links will be sent to Nandini Collection on WhatsApp.</span>
                 </div>
               </div>
 
@@ -263,10 +246,10 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                   {isProcessing ? (
                     <>
                       <span className="animate-spin inline-block h-3.5 w-3.5 border-2 border-white border-t-transparent rounded-full" />
-                      <span>Locking Order...</span>
-                    </>
-                  ) : (
-                    <span>Pay {formatPrice(totalPrice - totalDiscount)}</span>
+                      <span>Sending Bill...</span>
+                  </>
+                ) : (
+                    <span>Send Bill on WhatsApp</span>
                   )}
                 </button>
               </div>
