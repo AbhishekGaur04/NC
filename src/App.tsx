@@ -1,5 +1,6 @@
 // ─── App Root Shell Component ────────────────────────────────────────────────
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useFilterStore } from './app/providers/filter-store';
 import { useCartStore } from './app/providers/cart-store';
 import { useFilterEngine } from './hooks/useFilterEngine';
@@ -18,13 +19,38 @@ import { MobileNav } from './components/layout/MobileNav';
 import { PolicyModal, type PolicySection } from './components/shared/PolicyModal';
 import { WhatsAppButton } from './components/shared/WhatsAppButton';
 import type { Product } from './types/product';
+import { products } from './data/products';
+
+const ProductNotFound: React.FC<{ onGoHome: () => void }> = ({ onGoHome }) => (
+  <section className="mx-auto flex max-w-2xl flex-col items-center px-4 py-28 text-center">
+    <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-amber-700">Nandini Collection</span>
+    <h1 className="mt-3 font-serif text-4xl text-stone-900">This piece has moved on.</h1>
+    <p className="mt-3 max-w-md text-sm leading-relaxed text-stone-500">
+      We could not find that product. Browse the collection to discover the next piece for your occasion.
+    </p>
+    <button
+      type="button"
+      onClick={onGoHome}
+      className="mt-7 rounded-full bg-stone-900 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-amber-800"
+    >
+      Browse the collection
+    </button>
+  </section>
+);
 
 export const App: React.FC = () => {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [quickShopProduct, setQuickShopProduct] = useState<Product | null>(null);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [openPolicy, setOpenPolicy] = useState<PolicySection | null>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { slug } = useParams<{ slug: string }>();
+  const selectedProduct = useMemo(
+    () => (slug ? products.find((product) => product.slug === slug) ?? null : null),
+    [slug],
+  );
+  const isProductRoute = location.pathname.startsWith('/products/');
 
   // Read filter store and trigger worker bridge hook
   const filters = useFilterStore((state) => state.filters);
@@ -43,16 +69,19 @@ export const App: React.FC = () => {
       document.head.appendChild(canonical);
     }
     canonical.href = canonicalUrl;
-  }, []);
+    document.title = selectedProduct
+      ? `${selectedProduct.name} | Nandini Collection`
+      : 'Nandini Collection | Modern Indian Occasionwear';
+  }, [location.pathname, selectedProduct]);
 
   const handleSelectProduct = (product: Product) => {
-    setSelectedProduct(product);
+    navigate(`/products/${product.slug}`);
     // Scroll window smoothly to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleGoHome = () => {
-    setSelectedProduct(null);
+    navigate('/');
     setQuickShopProduct(null);
   };
 
@@ -65,7 +94,7 @@ export const App: React.FC = () => {
       <Header onCartToggle={openCart} onGoHome={handleGoHome} />
 
       <main className="flex-1">
-        {selectedProduct ? (
+        {isProductRoute && selectedProduct ? (
           /* PRODUCT DETAILS PAGE VIEW */
             <ProductDetail
               product={selectedProduct}
@@ -73,6 +102,8 @@ export const App: React.FC = () => {
               onSelectProduct={handleSelectProduct}
               onOpenPolicies={() => setOpenPolicy('shipping')}
           />
+        ) : isProductRoute ? (
+          <ProductNotFound onGoHome={handleGoHome} />
         ) : (
           /* CATALOG SEARCH VIEW */
           <>
