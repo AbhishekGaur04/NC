@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://nandinicollection.vercel.app/sitemap.xml
+
 # This is a public storefront. Do not use robots.txt as access control.
