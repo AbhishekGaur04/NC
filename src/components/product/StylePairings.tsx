@@ -11,6 +11,8 @@ interface StylePairingsProps {
 
 export const StylePairings: React.FC<StylePairingsProps> = ({ product, onSelectProduct }) => {
   const { similar, pairings } = useRecommendations(product.id, product.type, 4);
+  const recommendations = pairings.length > 0 ? pairings : similar;
+  const recommendationBadge = pairings.length > 0 ? 'Perfect Pairing' : 'Similar Style';
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-IN', {
@@ -69,39 +71,22 @@ export const StylePairings: React.FC<StylePairingsProps> = ({ product, onSelectP
   };
 
   return (
-    <div className="mt-12 border-t border-stone-100 pt-10 space-y-10">
-      {/* 1. Complete the Look (Pairings) */}
-      {pairings.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-lg sm:text-xl font-serif text-stone-900">Complete the Look</h3>
-              <p className="text-xs text-stone-500 mt-0.5">
-                Our in-house design team suggests pairing these together.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x scrollbar-thin scrollbar-thumb-stone-200">
-            {pairings.map((item) => renderCard(item, 'Perfect Pairing'))}
-          </div>
-        </div>
-      )}
-
-      {/* 2. Similar Styling Suggestions */}
-      {similar.length > 0 && (
-        <div className="space-y-4">
+    <div className="mt-12 border-t border-stone-100 pt-10">
+      {recommendations.length > 0 && (
+        <section className="space-y-4" aria-labelledby="complete-the-look-heading">
           <div>
-            <h3 className="text-lg sm:text-xl font-serif text-stone-900">You May Also Like</h3>
-            <p className="text-xs text-stone-500 mt-0.5">
-              Similar fabrics, embroidery, and design work profiles.
+            <h3 id="complete-the-look-heading" className="text-lg sm:text-xl font-serif text-stone-900">
+              Complete the Look
+            </h3>
+            <p className="mt-0.5 text-xs text-stone-500">
+              Curated pieces that complement your current selection.
             </p>
           </div>
 
-          <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x scrollbar-thin scrollbar-thumb-stone-200">
-            {similar.map((item) => renderCard(item, 'Similar Tag'))}
+          <div className="flex snap-x gap-4 overflow-x-auto pb-4 pt-1 scrollbar-thin scrollbar-thumb-stone-200">
+            {recommendations.map((item) => renderCard(item, recommendationBadge))}
           </div>
-        </div>
+        </section>
       )}
     </div>
   );
