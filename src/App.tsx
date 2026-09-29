@@ -86,7 +86,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-stone-50 font-sans pb-14 md:pb-0">
+    <div className="mobile-page-shell flex flex-col min-h-screen bg-stone-50 font-sans md:pb-0">
       {/* Dynamic Toast alerts */}
       <Toast />
 

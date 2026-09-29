@@ -18,7 +18,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
   const clearAllFilters = useFilterStore((state) => state.clearAll);
 
   return (
-    <nav className="fixed bottom-0 inset-x-0 z-40 bg-white border-t border-stone-150/40 md:hidden flex justify-around items-center h-14 shadow-lg">
+    <nav className="mobile-nav-safe fixed bottom-0 inset-x-0 z-40 bg-white border-t border-stone-150/40 md:hidden flex justify-around items-center shadow-lg">
       {/* Home trigger */}
       <button
         type="button"

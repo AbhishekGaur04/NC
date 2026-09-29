@@ -76,6 +76,35 @@
   }
 }
 
+/* iOS Safari exposes the home indicator and browser chrome inside the layout
+   viewport. Keep fixed navigation and sticky content out of those areas. */
+.mobile-page-shell {
+  padding-bottom: calc(3.5rem + env(safe-area-inset-bottom));
+}
+
+.mobile-nav-safe {
+  min-height: 3.5rem;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom-padding {
+  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+}
+
+.modal-viewport-height {
+  max-height: 90vh;
+  max-height: 90dvh;
+}
+
+.policy-modal-viewport-height {
+  max-height: 88vh;
+  max-height: 88dvh;
+}
+
 .glass {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);

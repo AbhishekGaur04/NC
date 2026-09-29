@@ -40,7 +40,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({ section, onClose }) =>
         role="dialog"
         aria-modal="true"
         aria-labelledby="policy-modal-title"
-        className="flex max-h-[88vh] w-full max-w-3xl flex-col overflow-hidden rounded-xl bg-stone-50 shadow-2xl"
+        className="policy-modal-viewport-height flex w-full max-w-3xl flex-col overflow-hidden rounded-xl bg-stone-50 shadow-2xl"
       >
         <header className="flex items-start justify-between border-b border-stone-200 bg-white px-6 py-5 sm:px-8">
           <div>

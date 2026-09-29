@@ -90,7 +90,7 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in">
-      <div className="w-full max-w-2xl bg-white border border-stone-100 rounded-lg shadow-2xl flex flex-col md:flex-row overflow-hidden animate-scale-up max-h-[90vh]" role="dialog" aria-modal="true" aria-label="Checkout dialog">
+      <div className="modal-viewport-height w-full max-w-2xl bg-white border border-stone-100 rounded-lg shadow-2xl flex flex-col md:flex-row overflow-hidden animate-scale-up" role="dialog" aria-modal="true" aria-label="Checkout dialog">
         {/* Main Content Area */}
         <div className="flex-1 p-6 md:p-8 overflow-y-auto custom-scroll">
           {step < 3 && (

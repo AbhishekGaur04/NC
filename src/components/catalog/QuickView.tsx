@@ -50,7 +50,7 @@ export const QuickView: React.FC<QuickViewProps> = ({ product, onClose }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in">
       <div className="absolute inset-0" onClick={onClose} />
 
-      <div className="relative w-full max-w-3xl bg-white border border-stone-100 rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row animate-scale-up max-h-[90vh]" role="dialog" aria-modal="true" aria-labelledby="quick-view-title">
+      <div className="modal-viewport-height relative w-full max-w-3xl bg-white border border-stone-100 rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row animate-scale-up" role="dialog" aria-modal="true" aria-labelledby="quick-view-title">
         {/* Close Button */}
         <button
           type="button"

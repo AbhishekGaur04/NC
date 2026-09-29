@@ -14,7 +14,7 @@ export const Header: React.FC<HeaderProps> = ({ onCartToggle, onGoHome }) => {
   const cartItemsCount = useCartStore((state) => state.totalItems);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-xl">
+    <header className="safe-area-top sticky top-0 z-40 w-full border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-xl">
       <div className="hidden md:flex items-center justify-center bg-stone-900 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-stone-100">
         Complimentary shipping across India on orders above ₹2,500
       </div>

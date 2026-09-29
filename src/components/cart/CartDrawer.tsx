@@ -139,7 +139,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ onCheckout }) => {
 
         {/* Footer Checkout Block */}
         {items.length > 0 && (
-          <div className="border-t border-stone-100 p-6 space-y-4 bg-white">
+          <div className="safe-area-bottom-padding border-t border-stone-100 px-6 pb-6 pt-6 space-y-4 bg-white">
             <div className="space-y-2 text-xs text-stone-600">
               <div className="flex justify-between">
                 <span>Items Total</span>
