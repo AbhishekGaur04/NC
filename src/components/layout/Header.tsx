@@ -23,13 +23,13 @@ export const Header: React.FC<HeaderProps> = ({ onCartToggle, onGoHome }) => {
         <button
           type="button"
           onClick={onGoHome}
-          className="min-w-0 flex-shrink flex items-center focus:outline-none"
+          className="min-w-0 flex-shrink flex items-baseline gap-2 md:gap-4 focus:outline-none"
           aria-label="NandiniCollection home"
         >
-          <span className="whitespace-nowrap font-serif text-[clamp(1.05rem,5.5vw,1.5rem)] font-semibold tracking-[clamp(0.18em,1.2vw,0.28em)] leading-none uppercase text-stone-900 hover:text-amber-800 transition-colors">
+          <span className="whitespace-nowrap font-serif text-[clamp(1.05rem,5.5vw,1.5rem)] font-normal tracking-[clamp(0.2em,1.4vw,0.32em)] leading-none uppercase text-stone-900 hover:text-amber-800 transition-colors">
             Nandini
           </span>
-          <span className="mt-1 whitespace-nowrap font-sans text-[clamp(0.42rem,1.8vw,0.56rem)] font-bold tracking-[0.28em] leading-none text-amber-700 uppercase">
+          <span className="whitespace-nowrap font-sans text-[clamp(0.42rem,1.8vw,0.68rem)] font-bold tracking-[clamp(0.22em,0.8vw,0.32em)] leading-none text-[#bf4d0b] uppercase">
             Collection
           </span>
         </button>
