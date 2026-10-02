@@ -26,8 +26,11 @@ export const Header: React.FC<HeaderProps> = ({ onCartToggle, onGoHome }) => {
           className="min-w-0 flex-shrink flex items-center focus:outline-none"
           aria-label="NandiniCollection home"
         >
-          <span className="whitespace-nowrap font-serif text-[clamp(1rem,5.5vw,1.5rem)] font-semibold tracking-[clamp(0.06em,0.8vw,0.2em)] leading-none text-stone-900 hover:text-amber-800 transition-colors">
-            NandiniCollection
+          <span className="whitespace-nowrap font-serif text-[clamp(1.05rem,5.5vw,1.5rem)] font-semibold tracking-[clamp(0.18em,1.2vw,0.28em)] leading-none uppercase text-stone-900 hover:text-amber-800 transition-colors">
+            Nandini
+          </span>
+          <span className="mt-1 whitespace-nowrap font-sans text-[clamp(0.42rem,1.8vw,0.56rem)] font-bold tracking-[0.28em] leading-none text-amber-700 uppercase">
+            Collection
           </span>
         </button>
 
