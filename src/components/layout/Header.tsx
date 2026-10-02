@@ -23,12 +23,12 @@ export const Header: React.FC<HeaderProps> = ({ onCartToggle, onGoHome }) => {
         <button
           type="button"
           onClick={onGoHome}
-          className="flex-shrink-0 flex items-center gap-1.5 focus:outline-none"
+          className="min-w-0 flex-shrink flex items-center focus:outline-none"
+          aria-label="NandiniCollection home"
         >
-          <span className="font-serif text-xl md:text-2xl font-semibold tracking-[0.2em] text-stone-900 hover:text-amber-800 transition-colors uppercase">
-            Nandini
+          <span className="whitespace-nowrap font-serif text-[1.05rem] min-[380px]:text-xl md:text-2xl font-semibold tracking-[0.08em] md:tracking-[0.2em] text-stone-900 hover:text-amber-800 transition-colors">
+            NandiniCollection
           </span>
-          <span className="hidden sm:inline font-sans text-[9px] tracking-[0.28em] font-bold text-amber-700 uppercase mt-1">Collection</span>
         </button>
 
         {/* Global Search box */}
