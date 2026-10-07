@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nandinicollection.com/sitemap.xml
+Sitemap: https://www.nandinicollection.com/sitemap.xml
 
 # This is a public storefront. Do not use robots.txt as access control.

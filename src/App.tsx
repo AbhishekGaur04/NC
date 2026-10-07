@@ -22,7 +22,7 @@ import { ReturnPolicyPage } from './components/shared/ReturnPolicyPage';
 import type { Product } from './types/product';
 import { products } from './data/products';
 
-const SITE_ORIGIN = 'https://nandinicollection.com';
+const SITE_ORIGIN = 'https://www.nandinicollection.com';
 
 const ProductNotFound: React.FC<{ onGoHome: () => void }> = ({ onGoHome }) => (
   <section className="mx-auto flex max-w-2xl flex-col items-center px-4 py-28 text-center">

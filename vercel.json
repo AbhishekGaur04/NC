@@ -1,23 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        { "type": "host", "value": "www.nandinicollection.com" }
-      ],
-      "destination": "https://nandinicollection.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/",
-      "has": [
-        { "type": "query", "key": "s" }
-      ],
-      "destination": "https://nandinicollection.com/",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     { "source": "/return-policy", "destination": "/" }
   ],
