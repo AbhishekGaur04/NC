@@ -1,4 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
       "source": "/:path*",
@@ -6,8 +7,7 @@
         { "type": "host", "value": "www.nandinicollection.com" }
       ],
       "destination": "https://nandinicollection.com/:path*",
-      "permanent": true,
-      "preserveQueryParams": false
+      "permanent": true
     },
     {
       "source": "/",
@@ -15,8 +15,7 @@
         { "type": "query", "key": "s" }
       ],
       "destination": "https://nandinicollection.com/",
-      "permanent": true,
-      "preserveQueryParams": false
+      "permanent": true
     }
   ],
   "rewrites": [
