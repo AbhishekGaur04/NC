@@ -1,4 +1,24 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "www.nandinicollection.com" }
+      ],
+      "destination": "https://nandinicollection.com/:path*",
+      "permanent": true,
+      "preserveQueryParams": false
+    },
+    {
+      "source": "/",
+      "has": [
+        { "type": "query", "key": "s" }
+      ],
+      "destination": "https://nandinicollection.com/",
+      "permanent": true,
+      "preserveQueryParams": false
+    }
+  ],
   "rewrites": [
     { "source": "/return-policy", "destination": "/" }
   ],
