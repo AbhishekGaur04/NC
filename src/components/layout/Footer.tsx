@@ -46,6 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy }) => {
           <ul className="text-xs space-y-2">
             <li><button type="button" onClick={() => onOpenPolicy('about')} className="hover:text-amber-400 transition-colors">About the atelier</button></li>
             <li><button type="button" onClick={() => onOpenPolicy('shipping')} className="hover:text-amber-400 transition-colors">Shipping & exchanges</button></li>
+            <li><a href="/return-policy" className="hover:text-amber-400 transition-colors">Return policy</a></li>
             <li><a href="https://www.instagram.com/nandinicollection_designer" target="_blank" rel="noreferrer" className="hover:text-amber-400 transition-colors">Instagram atelier</a></li>
           </ul>
         </div>

@@ -42,7 +42,8 @@ export const FilterPanel: React.FC<FilterPanelProps> = React.memo(({
             <button
               type="button"
               onClick={onClose}
-              className="text-stone-500 hover:text-stone-900 md:hidden"
+              aria-label="Close filters"
+              className="text-xs font-semibold text-stone-500 hover:text-stone-900 transition-colors uppercase tracking-wider md:hidden"
             >
               Close
             </button>

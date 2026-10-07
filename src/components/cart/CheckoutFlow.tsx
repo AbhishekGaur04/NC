@@ -13,12 +13,12 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
   const [isProcessing, setIsProcessing] = useState(false);
   const [addressError, setAddressError] = useState<string | null>(null);
   const [address, setAddress] = useState({
-    name: 'Nandini Sen',
-    phone: '+91 98765 43210',
-    street: '12, Primrose Gardens, Park Street Area',
-    city: 'Kolkata',
-    state: 'West Bengal',
-    pincode: '700016',
+    name: '',
+    phone: '',
+    street: '',
+    city: '',
+    state: '',
+    pincode: '',
   });
 
   if (!isOpen) return null;

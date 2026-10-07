@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    { "source": "/return-policy", "destination": "/" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -18,6 +18,7 @@ import { Footer } from './components/layout/Footer';
 import { MobileNav } from './components/layout/MobileNav';
 import { PolicyModal, type PolicySection } from './components/shared/PolicyModal';
 import { WhatsAppButton } from './components/shared/WhatsAppButton';
+import { ReturnPolicyPage } from './components/shared/ReturnPolicyPage';
 import type { Product } from './types/product';
 import { products } from './data/products';
 
@@ -39,6 +40,7 @@ const ProductNotFound: React.FC<{ onGoHome: () => void }> = ({ onGoHome }) => (
 );
 
 export const App: React.FC = () => {
+  const MOBILE_FILTER_HISTORY_KEY = 'nandini-mobile-filter';
   const [quickShopProduct, setQuickShopProduct] = useState<Product | null>(null);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
@@ -51,6 +53,7 @@ export const App: React.FC = () => {
     [slug],
   );
   const isProductRoute = location.pathname.startsWith('/products/');
+  const isReturnPolicyRoute = location.pathname === '/return-policy';
 
   // Read filter store and trigger worker bridge hook
   const filters = useFilterStore((state) => state.filters);
@@ -69,10 +72,44 @@ export const App: React.FC = () => {
       document.head.appendChild(canonical);
     }
     canonical.href = canonicalUrl;
-    document.title = selectedProduct
-      ? `${selectedProduct.name} | Nandini Collection`
-      : 'Nandini Collection | Modern Indian Occasionwear';
-  }, [location.pathname, selectedProduct]);
+    document.title = isReturnPolicyRoute
+      ? 'Return & Exchange Policy | Nandini Collection'
+      : selectedProduct
+        ? `${selectedProduct.name} | Nandini Collection`
+        : 'Nandini Collection | Modern Indian Occasionwear';
+  }, [location.pathname, selectedProduct, isReturnPolicyRoute]);
+
+  useEffect(() => {
+    if (!isMobileFilterOpen) return;
+
+    const handleBackNavigation = () => {
+      setIsMobileFilterOpen(false);
+    };
+
+    window.addEventListener('popstate', handleBackNavigation);
+    return () => window.removeEventListener('popstate', handleBackNavigation);
+  }, [isMobileFilterOpen]);
+
+  const closeMobileFilters = () => {
+    setIsMobileFilterOpen(false);
+    if (window.history.state?.[MOBILE_FILTER_HISTORY_KEY]) {
+      window.history.back();
+    }
+  };
+
+  const toggleMobileFilters = () => {
+    if (isMobileFilterOpen) {
+      closeMobileFilters();
+      return;
+    }
+
+    window.history.pushState(
+      { ...window.history.state, [MOBILE_FILTER_HISTORY_KEY]: true },
+      '',
+      window.location.href,
+    );
+    setIsMobileFilterOpen(true);
+  };
 
   const handleSelectProduct = (product: Product) => {
     navigate(`/products/${product.slug}`);
@@ -94,7 +131,9 @@ export const App: React.FC = () => {
       <Header onCartToggle={openCart} onGoHome={handleGoHome} />
 
       <main className="flex-1">
-        {isProductRoute && selectedProduct ? (
+        {isReturnPolicyRoute ? (
+          <ReturnPolicyPage onGoHome={handleGoHome} />
+        ) : isProductRoute && selectedProduct ? (
           /* PRODUCT DETAILS PAGE VIEW */
             <ProductDetail
               product={selectedProduct}
@@ -181,7 +220,7 @@ export const App: React.FC = () => {
           <div className="w-80 bg-white h-full shadow-2xl p-6 flex flex-col relative animate-slide-left">
             <FilterPanel
               currentCounts={facetCounts}
-              onClose={() => setIsMobileFilterOpen(false)}
+              onClose={closeMobileFilters}
             />
           </div>
         </div>
@@ -189,7 +228,7 @@ export const App: React.FC = () => {
 
       {/* Mobile Nav footer */}
       <MobileNav
-        onFilterToggle={() => setIsMobileFilterOpen(!isMobileFilterOpen)}
+        onFilterToggle={toggleMobileFilters}
         onCartToggle={openCart}
         onGoHome={handleGoHome}
       />
