@@ -19,7 +19,10 @@ const MAX_QUANTITY_PER_LOCK = 5;
 let lockCounter = 0;
 
 function generateLockId(): string {
-  return `lock_${Date.now()}_${++lockCounter}`;
+  const randomId = typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function'
+    ? crypto.randomUUID()
+    : `${Date.now()}-${++lockCounter}-${Math.random().toString(36).slice(2)}`;
+  return `lock_${randomId}`;
 }
 
 export class LockManager {
@@ -40,7 +43,12 @@ export class LockManager {
     quantity: number,
     userId: string
   ): LockResult {
-    // Validate quantity
+    // Browser values are untrusted. Real inventory must still be enforced by
+    // a server transaction before accepting payment.
+    if (!Number.isInteger(productId) || productId < 0 || !Number.isInteger(quantity) || quantity < 1) {
+      return { success: false, reason: 'out_of_stock', availableQuantity: 0 };
+    }
+
     if (quantity > MAX_QUANTITY_PER_LOCK) {
       return { success: false, reason: 'max_quantity', availableQuantity: MAX_QUANTITY_PER_LOCK };
     }

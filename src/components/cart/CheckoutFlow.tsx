@@ -7,19 +7,49 @@ interface CheckoutFlowProps {
   onOpenPolicies?: () => void;
 }
 
+const initialAddress = {
+  name: '',
+  phone: '',
+  street: '',
+  city: '',
+  state: '',
+  pincode: '',
+};
+
+const ADDRESS_LIMITS = {
+  name: 80,
+  phone: 15,
+  street: 160,
+  city: 80,
+  state: 80,
+  pincode: 6,
+} as const;
+
+const validateAddress = (address: typeof initialAddress): string | null => {
+  if (!address.name || !/^[\p{L} .'-]{2,80}$/u.test(address.name)) {
+    return 'Enter a valid contact name (2–80 characters).';
+  }
+  if (!/^\+?[0-9 ()-]{7,15}$/.test(address.phone)) {
+    return 'Enter a valid phone number.';
+  }
+  if (!/^\d{6}$/.test(address.pincode)) {
+    return 'Enter a valid 6-digit pincode.';
+  }
+  if (!address.street || address.street.length > ADDRESS_LIMITS.street) {
+    return `Enter a street address up to ${ADDRESS_LIMITS.street} characters.`;
+  }
+  if (!address.city || address.city.length > ADDRESS_LIMITS.city || !address.state || address.state.length > ADDRESS_LIMITS.state) {
+    return 'Enter valid city and state names.';
+  }
+  return null;
+};
+
 export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onOpenPolicies }) => {
   const { items, totalPrice, totalDiscount, checkout } = useCartStore();
   const [step, setStep] = useState<1 | 2 | 3>(1); // 1: Delivery, 2: Payment, 3: Success
   const [isProcessing, setIsProcessing] = useState(false);
   const [addressError, setAddressError] = useState<string | null>(null);
-  const [address, setAddress] = useState({
-    name: '',
-    phone: '',
-    street: '',
-    city: '',
-    state: '',
-    pincode: '',
-  });
+  const [address, setAddress] = useState(initialAddress);
 
   if (!isOpen) return null;
 
@@ -33,9 +63,13 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
 
   const handleNext = () => {
     if (step === 1) {
-      const hasMissingAddress = Object.values(address).some((value) => !value.trim());
-      if (hasMissingAddress) {
-        setAddressError('Please complete every delivery address field before continuing.');
+      const normalizedAddress = Object.fromEntries(
+        Object.entries(address).map(([key, value]) => [key, value.trim()]),
+      ) as typeof address;
+      setAddress(normalizedAddress);
+      const validationError = validateAddress(normalizedAddress);
+      if (validationError) {
+        setAddressError(validationError);
         return;
       }
       setAddressError(null);
@@ -121,8 +155,10 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                   <input
                     type="text"
                     required
+                    maxLength={ADDRESS_LIMITS.name}
+                    autoComplete="name"
                     value={address.name}
-                    onChange={(e) => setAddress({ ...address, name: e.target.value })}
+                    onChange={(e) => setAddress({ ...address, name: e.target.value.slice(0, ADDRESS_LIMITS.name) })}
                     className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm text-stone-850"
                   />
                 </div>
@@ -133,10 +169,12 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                       Phone Number
                     </label>
                     <input
-                      type="text"
+                      type="tel"
                       required
+                      maxLength={ADDRESS_LIMITS.phone}
+                      autoComplete="tel"
                       value={address.phone}
-                      onChange={(e) => setAddress({ ...address, phone: e.target.value })}
+                      onChange={(e) => setAddress({ ...address, phone: e.target.value.slice(0, ADDRESS_LIMITS.phone) })}
                       className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm text-stone-850"
                     />
                   </div>
@@ -147,8 +185,11 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                     <input
                       type="text"
                       required
+                      inputMode="numeric"
+                      maxLength={ADDRESS_LIMITS.pincode}
+                      autoComplete="postal-code"
                       value={address.pincode}
-                      onChange={(e) => setAddress({ ...address, pincode: e.target.value })}
+                      onChange={(e) => setAddress({ ...address, pincode: e.target.value.replace(/\D/g, '').slice(0, ADDRESS_LIMITS.pincode) })}
                       className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm text-stone-850"
                     />
                   </div>
@@ -161,8 +202,10 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                   <input
                     type="text"
                     required
+                    maxLength={ADDRESS_LIMITS.street}
+                    autoComplete="street-address"
                     value={address.street}
-                    onChange={(e) => setAddress({ ...address, street: e.target.value })}
+                    onChange={(e) => setAddress({ ...address, street: e.target.value.slice(0, ADDRESS_LIMITS.street) })}
                     className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm text-stone-850"
                   />
                 </div>
@@ -175,8 +218,10 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                     <input
                       type="text"
                       required
+                      maxLength={ADDRESS_LIMITS.city}
+                      autoComplete="address-level2"
                       value={address.city}
-                      onChange={(e) => setAddress({ ...address, city: e.target.value })}
+                      onChange={(e) => setAddress({ ...address, city: e.target.value.slice(0, ADDRESS_LIMITS.city) })}
                       className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm text-stone-850"
                     />
                   </div>
@@ -187,8 +232,10 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                     <input
                       type="text"
                       required
+                      maxLength={ADDRESS_LIMITS.state}
+                      autoComplete="address-level1"
                       value={address.state}
-                      onChange={(e) => setAddress({ ...address, state: e.target.value })}
+                      onChange={(e) => setAddress({ ...address, state: e.target.value.slice(0, ADDRESS_LIMITS.state) })}
                       className="w-full px-3 py-2 border border-stone-200 rounded-md focus:border-stone-900 focus:outline-none text-sm text-stone-850"
                     />
                   </div>
