@@ -51,6 +51,11 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
   useEffect(() => {
     if (!containerRef.current) return;
 
+    const connection = (navigator as Navigator & {
+      connection?: { saveData?: boolean; effectiveType?: string };
+    }).connection;
+    const isConstrainedConnection = connection?.saveData || connection?.effectiveType === '2g' || connection?.effectiveType === 'slow-2g';
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -61,7 +66,7 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
         });
       },
       {
-        rootMargin: '200px', // start loading 200px before entering viewport
+        rootMargin: isConstrainedConnection ? '40px' : '120px',
       }
     );
 

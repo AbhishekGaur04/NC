@@ -1,5 +1,5 @@
 // ─── App Root Shell Component ────────────────────────────────────────────────
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useFilterStore } from './app/providers/filter-store';
 import { useCartStore } from './app/providers/cart-store';
@@ -9,18 +9,20 @@ import { HeroBanner } from './components/layout/HeroBanner';
 import { ActiveFilters } from './components/filters/ActiveFilters';
 import { FilterPanel } from './components/filters/FilterPanel';
 import { ProductGrid } from './components/catalog/ProductGrid';
-import { QuickView } from './components/catalog/QuickView';
-import { ProductDetail } from './components/product/ProductDetail';
-import { CartDrawer } from './components/cart/CartDrawer';
-import { CheckoutFlow } from './components/cart/CheckoutFlow';
 import { Toast } from './components/shared/Toast';
 import { Footer } from './components/layout/Footer';
 import { MobileNav } from './components/layout/MobileNav';
-import { PolicyModal, type PolicySection } from './components/shared/PolicyModal';
 import { WhatsAppButton } from './components/shared/WhatsAppButton';
-import { ReturnPolicyPage } from './components/shared/ReturnPolicyPage';
+import type { PolicySection } from './components/shared/PolicyModal';
 import type { Product } from './types/product';
 import { products } from './data/products';
+
+const QuickView = lazy(() => import('./components/catalog/QuickView'));
+const ProductDetail = lazy(() => import('./components/product/ProductDetail'));
+const CartDrawer = lazy(() => import('./components/cart/CartDrawer'));
+const CheckoutFlow = lazy(() => import('./components/cart/CheckoutFlow'));
+const PolicyModal = lazy(() => import('./components/shared/PolicyModal'));
+const ReturnPolicyPage = lazy(() => import('./components/shared/ReturnPolicyPage'));
 
 const SITE_ORIGIN = 'https://www.nandinicollection.com';
 
@@ -64,6 +66,7 @@ export const App: React.FC = () => {
 
   // Cart operations
   const openCart = useCartStore((state) => state.openCart);
+  const isCartOpen = useCartStore((state) => state.isCartOpen);
 
   useEffect(() => {
     const canonicalUrl = `${SITE_ORIGIN}${window.location.pathname}`;
@@ -132,6 +135,7 @@ export const App: React.FC = () => {
       {/* Navigation Header */}
       <Header onCartToggle={openCart} onGoHome={handleGoHome} />
 
+      <Suspense fallback={<main className="min-h-[60vh] flex-1 bg-stone-50" aria-busy="true" />}>
       <main className="flex-1">
         {isReturnPolicyRoute ? (
           <ReturnPolicyPage onGoHome={handleGoHome} />
@@ -214,7 +218,7 @@ export const App: React.FC = () => {
       {/* Persistent customer support entry point. Product pages include the selected product in the message. */}
       <WhatsAppButton product={selectedProduct} />
 
-      <PolicyModal section={openPolicy} onClose={() => setOpenPolicy(null)} />
+      {openPolicy && <PolicyModal section={openPolicy} onClose={() => setOpenPolicy(null)} />}
 
       {/* Mobile Drawer Filter panel */}
       {isMobileFilterOpen && (
@@ -236,17 +240,20 @@ export const App: React.FC = () => {
       />
 
       {/* Slide-out Cart Drawer panel */}
-      <CartDrawer onCheckout={() => setIsCheckoutOpen(true)} />
+      {isCartOpen && <CartDrawer onCheckout={() => setIsCheckoutOpen(true)} />}
 
       {/* Multi-step Checkout dialog flow */}
-      <CheckoutFlow
-        isOpen={isCheckoutOpen}
-        onClose={() => setIsCheckoutOpen(false)}
-        onOpenPolicies={() => setOpenPolicy('shipping')}
-      />
+      {isCheckoutOpen && (
+        <CheckoutFlow
+          isOpen
+          onClose={() => setIsCheckoutOpen(false)}
+          onOpenPolicies={() => setOpenPolicy('shipping')}
+        />
+      )}
 
       {/* Quick View shop drawer modal */}
-      <QuickView product={quickShopProduct} onClose={() => setQuickShopProduct(null)} />
+      {quickShopProduct && <QuickView product={quickShopProduct} onClose={() => setQuickShopProduct(null)} />}
+      </Suspense>
     </div>
   );
 };
