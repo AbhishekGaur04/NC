@@ -70,6 +70,14 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     const canonicalUrl = `${SITE_ORIGIN}${window.location.pathname}`;
+    const pageTitle = isReturnPolicyRoute
+      ? 'Return & Exchange Policy | Nandini Collection'
+      : selectedProduct
+        ? `${selectedProduct.name} | Nandini Collection`
+        : 'Nandini Collection | Modern Indian Occasionwear';
+    const pageDescription = selectedProduct?.description
+      ?? 'Nandini Collection — contemporary Indian occasionwear, made for meaningful moments.';
+
     let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
@@ -77,11 +85,46 @@ export const App: React.FC = () => {
       document.head.appendChild(canonical);
     }
     canonical.href = canonicalUrl;
-    document.title = isReturnPolicyRoute
-      ? 'Return & Exchange Policy | Nandini Collection'
-      : selectedProduct
-        ? `${selectedProduct.name} | Nandini Collection`
-        : 'Nandini Collection | Modern Indian Occasionwear';
+    document.title = pageTitle;
+
+    const setMeta = (selector: string, value: string) => {
+      const element = document.querySelector<HTMLMetaElement>(selector);
+      if (element) element.content = value;
+    };
+    setMeta('meta[name="description"]', pageDescription);
+    setMeta('meta[property="og:title"]', pageTitle);
+    setMeta('meta[property="og:description"]', pageDescription);
+    setMeta('meta[property="og:url"]', canonicalUrl);
+    setMeta('meta[name="twitter:title"]', pageTitle);
+    setMeta('meta[name="twitter:description"]', pageDescription);
+
+    let structuredData = document.querySelector<HTMLScriptElement>('script[data-product-schema]');
+    if (selectedProduct) {
+      if (!structuredData) {
+        structuredData = document.createElement('script');
+        structuredData.type = 'application/ld+json';
+        structuredData.dataset.productSchema = 'true';
+        document.head.appendChild(structuredData);
+      }
+      structuredData.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: selectedProduct.name,
+        description: selectedProduct.description,
+        image: selectedProduct.images.map((image) => `${SITE_ORIGIN}${image.url}`),
+        sku: selectedProduct.sku,
+        brand: { '@type': 'Brand', name: 'Nandini Collection' },
+        offers: {
+          '@type': 'Offer',
+          url: canonicalUrl,
+          priceCurrency: 'INR',
+          price: selectedProduct.salePrice,
+          availability: 'https://schema.org/InStock',
+        },
+      });
+    } else {
+      structuredData?.remove();
+    }
   }, [location.pathname, selectedProduct, isReturnPolicyRoute]);
 
   useEffect(() => {
