@@ -45,11 +45,15 @@ const validateAddress = (address: typeof initialAddress): string | null => {
 };
 
 export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onOpenPolicies }) => {
-  const { items, totalPrice, totalDiscount, checkout } = useCartStore();
-  const [step, setStep] = useState<1 | 2 | 3>(1); // 1: Delivery, 2: Payment, 3: Success
+  const { items, totalPrice, totalDiscount, openCart } = useCartStore();
+  const [step, setStep] = useState<1 | 2 | 3>(1); // 1: Delivery, 2: WhatsApp request, 3: Request ready
   const [isProcessing, setIsProcessing] = useState(false);
   const [addressError, setAddressError] = useState<string | null>(null);
+  const [orderRequestError, setOrderRequestError] = useState<string | null>(null);
   const [address, setAddress] = useState(initialAddress);
+  const [requestId] = useState(
+    () => `NC-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`,
+  );
 
   if (!isOpen) return null;
 
@@ -78,7 +82,6 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
   };
 
   const buildWhatsAppInvoice = () => {
-    const orderId = `NC-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`;
     const imageBaseUrl = window.location.origin;
     const lines = items.flatMap((item) => [
       `${item.product.name}`,
@@ -89,8 +92,8 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
     ]);
 
     return [
-      'NANDINI COLLECTION — ORDER INVOICE',
-      `Order ID: ${orderId}`,
+      'NANDINI COLLECTION — ORDER REQUEST',
+      `Request reference: ${requestId}`,
       '',
       'CUSTOMER & DELIVERY DETAILS',
       `Name: ${address.name}`,
@@ -99,26 +102,37 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
       '',
       'ORDER ITEMS',
       ...lines,
-      'BILL SUMMARY',
+      'REQUEST ESTIMATE',
       `Gross price: ${formatPrice(totalPrice)}`,
       `Discount: -${formatPrice(totalDiscount)}`,
-      `Net payable: ${formatPrice(totalPrice - totalDiscount)}`,
-      'Payment mode: WhatsApp order confirmation',
+      `Estimated total: ${formatPrice(totalPrice - totalDiscount)}`,
+      'Payment mode: To be confirmed with the store',
       '',
-      'Please confirm availability and share the payment instructions. The product image link is included above for each item.',
+      'Please confirm item availability, final delivery details and payment instructions. This is an order request, not a completed order. Product image links are included above for each item.',
     ].join('\n');
   };
 
-  const handlePayment = async () => {
+  const handleWhatsAppRequest = () => {
     setIsProcessing(true);
-    const invoice = buildWhatsAppInvoice();
-    const whatsappUrl = `https://wa.me/918824122515?text=${encodeURIComponent(invoice)}`;
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    setOrderRequestError(null);
+    try {
+      const invoice = buildWhatsAppInvoice();
+      const whatsappUrl = `https://wa.me/918824122515?text=${encodeURIComponent(invoice)}`;
+      const whatsappWindow = window.open(whatsappUrl, '_blank');
 
-    const success = await checkout();
-    setIsProcessing(false);
-    if (success) {
+      if (!whatsappWindow) {
+        setOrderRequestError('WhatsApp could not be opened. Allow pop-ups for this site and try again.');
+        return;
+      }
+      whatsappWindow.opener = null;
+
+      // A WhatsApp draft is not an order confirmation. Keep the cart and its
+      // local reservation until the store confirms availability and payment.
       setStep(3);
+    } catch {
+      setOrderRequestError('We could not open WhatsApp. Please try again or contact the store directly.');
+    } finally {
+      setIsProcessing(false);
     }
   };
 
@@ -129,13 +143,13 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
         <div className="flex-1 p-6 md:p-8 overflow-y-auto custom-scroll">
           {step < 3 && (
             <div className="flex items-center justify-between mb-6 pb-2 border-b border-stone-100">
-              <h3 id="checkout-title" className="text-xl font-serif text-stone-900">Secure Checkout</h3>
+              <h3 id="checkout-title" className="text-xl font-serif text-stone-900">Order Request</h3>
               <div className="flex gap-2 text-xs font-semibold text-stone-400">
                 <span className={step === 1 ? 'text-amber-700' : 'text-emerald-600'}>
                   1. Delivery
                 </span>
                 <span>/</span>
-                <span className={step === 2 ? 'text-amber-700' : ''}>2. Payment</span>
+                <span className={step === 2 ? 'text-amber-700' : ''}>2. WhatsApp</span>
               </div>
             </div>
           )}
@@ -268,7 +282,7 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                   onClick={handleNext}
                   className="px-6 py-2 bg-stone-900 text-white rounded-md text-xs font-semibold uppercase tracking-wider hover:bg-stone-800 transition-all shadow"
                 >
-                  Proceed to Payment
+                  Continue to WhatsApp
                 </button>
               </div>
             </div>
@@ -284,9 +298,15 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
               <div className="space-y-3.5">
                 <div className="bg-emerald-50 border border-emerald-100 rounded-md p-3 text-xs text-emerald-800 flex items-start gap-2">
                   <span>💬</span>
-                  <span>Your complete bill, delivery address, item sizes, quantities, prices and product image links will be sent to Nandini Collection on WhatsApp.</span>
+                  <span>WhatsApp will open with your order request prefilled. Review it and tap Send in WhatsApp. The store will confirm availability, delivery and payment with you.</span>
                 </div>
               </div>
+
+              {orderRequestError && (
+                <p role="alert" className="rounded-md border border-rose-100 bg-rose-50 p-3 text-xs font-semibold text-rose-700">
+                  {orderRequestError}
+                </p>
+              )}
 
               <div className="flex gap-3 justify-end pt-6">
                 <button
@@ -299,7 +319,7 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                 </button>
                 <button
                   type="button"
-                  onClick={handlePayment}
+                  onClick={handleWhatsAppRequest}
                   disabled={isProcessing}
                   className="px-6 py-2 bg-stone-900 text-white rounded-md text-xs font-semibold uppercase tracking-wider hover:bg-stone-800 transition-all shadow flex items-center gap-2 disabled:bg-stone-500"
                 >
@@ -323,23 +343,19 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                 ✓
               </div>
               <div>
-                <h3 className="text-2xl font-serif text-stone-900">Order Placed Successfully</h3>
+                <h3 className="text-2xl font-serif text-stone-900">Your WhatsApp Request Is Ready</h3>
                 <p className="text-xs text-stone-500 mt-1 max-w-sm mx-auto">
-                  Your purchase is complete, and the matching garments have been locked to your name in our warehouse inventory.
+                  Review the prefilled message in WhatsApp and tap Send to contact us. Your order is not confirmed until we verify availability and arrange payment with you.
                 </p>
               </div>
 
               <div className="bg-stone-50 border border-stone-100 rounded-md p-4 max-w-md mx-auto text-left space-y-2.5">
                 <div className="flex justify-between text-xs text-stone-600">
-                  <span className="font-semibold text-stone-800">Order ID:</span>
-                  <span>NC-2026-890251</span>
-                </div>
-                <div className="flex justify-between text-xs text-stone-600">
-                  <span className="font-semibold text-stone-800">Shipment Delivery:</span>
-                  <span>Expected in 3-5 Business Days</span>
+                  <span className="font-semibold text-stone-800">Request reference:</span>
+                  <span>{requestId}</span>
                 </div>
                 <div className="flex justify-between text-xs text-stone-600 border-t border-stone-200/60 pt-2.5">
-                  <span className="font-semibold text-stone-800">Shipped To:</span>
+                  <span className="font-semibold text-stone-800">Delivery address:</span>
                   <span className="text-right">
                     {address.name} <br /> {address.street}, {address.city} - {address.pincode}
                   </span>
@@ -350,11 +366,13 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = ({ isOpen, onClose, onO
                 type="button"
                 onClick={() => {
                   setStep(1);
+                  setOrderRequestError(null);
                   onClose();
+                  openCart();
                 }}
                 className="px-6 py-2.5 bg-stone-900 hover:bg-stone-850 text-white rounded-md text-xs font-semibold uppercase tracking-wider transition-colors shadow"
               >
-                Continue Styling
+                Review Cart
               </button>
             </div>
           )}

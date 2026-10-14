@@ -160,7 +160,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ onCheckout }) => {
             </div>
 
             <div className="bg-stone-50 border border-stone-100 rounded-md p-3 text-[10px] text-stone-500 leading-relaxed">
-              ⚠️ <span className="font-semibold text-stone-800">Flash Sale Inventory Lock:</span> Cart items are held for exactly 10 minutes. If checkout is not completed before expiry, items will release automatically for other customers.
+              <span className="font-semibold text-stone-800">Availability preview:</span> This browser-only cart timer lasts up to 10 minutes and does not reserve warehouse stock. We will confirm availability when we receive your WhatsApp request.
             </div>
 
             <button
@@ -171,7 +171,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ onCheckout }) => {
               }}
               className="w-full py-3 bg-stone-900 hover:bg-stone-850 text-white rounded-md text-sm font-semibold uppercase tracking-wider transition-colors shadow-md hover:shadow-lg"
             >
-              Secure Checkout
+              Continue with WhatsApp
             </button>
           </div>
         )}
