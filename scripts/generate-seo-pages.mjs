@@ -17,6 +17,29 @@ const escapeHtml = (value) => String(value)
 const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 const shell = await readFile(join(distRoot, 'index.html'), 'utf8');
 
+const slugs = new Set();
+for (const product of catalog) {
+  if (!product.slug || !product.name || !product.description || !product.images?.[0]?.url) {
+    throw new Error(`Product is missing SEO page data: ${product.sku ?? product.name ?? 'unknown product'}`);
+  }
+  if (slugs.has(product.slug)) throw new Error(`Duplicate product slug: ${product.slug}`);
+  slugs.add(product.slug);
+}
+
+const sitemapUrls = [
+  { loc: `${siteOrigin}/`, changefreq: 'daily', priority: '1.0' },
+  { loc: `${siteOrigin}/return-policy`, changefreq: 'monthly', priority: '0.5' },
+  ...catalog.map((product) => ({
+    loc: `${siteOrigin}/products/${product.slug}`,
+    changefreq: 'weekly',
+    priority: '0.8',
+  })),
+];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls
+  .map(({ loc, changefreq, priority }) => `  <url>\n    <loc>${escapeHtml(loc)}</loc>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`)
+  .join('\n')}\n</urlset>\n`;
+await writeFile(join(distRoot, 'sitemap.xml'), sitemap, 'utf8');
+
 for (const product of catalog) {
   const canonicalUrl = `${siteOrigin}/products/${product.slug}`;
   const title = `${product.name} | Nandini Collection`;
@@ -48,6 +71,13 @@ for (const product of catalog) {
         <p>Price: ₹${escapeHtml(product.salePrice)}</p>
         <a href="/">Browse the full collection</a>
       </article>
+      <nav aria-label="More products from Nandini Collection">
+        <h2>Explore more from the collection</h2>
+        <ul>${catalog
+          .filter((item) => item.slug !== product.slug)
+          .map((item) => `<li><a href="/products/${encodeURIComponent(item.slug)}">${escapeHtml(item.name)}</a></li>`)
+          .join('')}</ul>
+      </nav>
     </main>`;
 
   const page = shell
@@ -66,4 +96,4 @@ for (const product of catalog) {
   await writeFile(join(outputDir, 'index.html'), page, 'utf8');
 }
 
-console.log(`Generated ${catalog.length} crawlable product pages in dist/products/.`);
+console.log(`Generated ${catalog.length} crawlable product pages and a ${sitemapUrls.length}-URL sitemap in dist/.`);
